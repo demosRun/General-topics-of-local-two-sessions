@@ -1,0 +1,28 @@
+<template lang="pug">
+.four
+  .box
+    img.page-logo(src="@|page-logo.png|")
+    plug(_name="cardSwiper" _src="./src/module/cardSwiper.owo")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.touch({
+        el: this.$el,
+        end: function (e) {
+          if (e.swipe[1] < -100) {
+            owo.go('five', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+          }
+        }
+      })
+    }
+  }
+</script>
+
+
+<style lang="less">
+.box {
+  height: 720px;
+}
+</style>

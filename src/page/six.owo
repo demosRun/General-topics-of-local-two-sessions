@@ -1,0 +1,16 @@
+<template lang="pug">
+.six
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      
+    }
+  }
+</script>
+
+
+<style lang="less">
+
+</style>

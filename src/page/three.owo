@@ -131,7 +131,7 @@
         el: this.$el,
         end: function (e) {
           if (e.swipe[1] < -100) {
-            owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+            owo.go('four', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
           }
         }
       })

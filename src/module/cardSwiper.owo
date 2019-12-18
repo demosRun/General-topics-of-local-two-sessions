@@ -1,0 +1,128 @@
+<template lang="pug">
+.card-swiper-box
+  .swiper-container.clear
+    .swiper-wrapper
+      .swiper-slide(:for="item in data._swiperBoxList" o-hover="grow")
+        .swiper-slide-box
+          img(src="{{item.src}}" width="525" height="395")
+          .text {{item.text}}
+  .tool-bar
+    img.forward(src="@|forward-2.png|" o-hover="grow" :tap="next")
+    img.back(src="@|back-2.png|" o-hover="grow" :tap="previou")
+  .index-box
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      swiper: null,
+      _swiperBoxList: [
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+      ]
+    },
+    created: function () {
+      // 轮播图展示区域swiper
+      setTimeout(() => {
+        this.data.swiper = new Swiper(this.$el.getElementsByClassName('swiper-container')[0], {
+          slidesPerView: 2,
+          slidesPerGroup : 2,
+          slidesPerColumn: 2,
+          on: {
+            slideChange: () => {
+              this.$el.getElementsByClassName('index-box')[0].innerText = `${Math.ceil(this.data.swiper.activeIndex / 2) + 1}/${Math.ceil(this.data.swiper.slides.length / 4)}`
+            }
+          }
+        })
+        // 生成页码
+        this.$el.getElementsByClassName('index-box')[0].innerText = `${Math.ceil(this.data.swiper.activeIndex / 2) + 1}/${Math.ceil(this.data.swiper.slides.length / 4)}`
+      }, 0)
+    },
+    previou: function () {
+      this.data.swiper.slidePrev()
+    },
+    next: function () {
+      this.data.swiper.slideNext()
+    }
+  }
+</script>
+
+
+<style lang="less">
+.card-swiper-box {
+  width: 1000px;
+  height: 630px;
+}
+.swiper-container {
+  width: 840px;
+  height: 630px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.swiper-slide {
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .text {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 96%;
+    color: white;
+    padding: 0 2%;
+    height: 25px;
+    line-height: 25px;
+  }
+}
+.swiper-wrapper {
+  height: 100%;
+}
+.swiper-slide-box {
+  margin: 7%;
+  width: 86%;
+  height: 86%;
+  cursor: pointer;
+  position: relative;
+}
+.tool-bar {
+  position: absolute;
+  left: 3%;
+  top: 40%;
+  img {
+    display: block;
+    margin: 20px 0;
+    cursor: pointer;
+  }
+}
+.index-box {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  bottom: 10%;
+  left: 3%;
+  line-height: 60px;
+  font-family: "Microsoft YaHei";
+  font-size: 27px;
+  font-weight: bold;
+  color: #0b7fd3;
+  letter-spacing: 8px;
+  background-image: url("@|index-box-bg.png|");
+}
+</style>

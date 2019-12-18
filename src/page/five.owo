@@ -1,0 +1,20 @@
+<template lang="pug">
+.five
+  .box
+    img.page-logo(src="@|page-logo.png|")
+    plug(_name="cardSwiper2" _src="./src/module/cardSwiper2.owo")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+    }
+  }
+</script>
+
+
+<style lang="less">
+.box {
+  height: 720px;
+}
+</style>

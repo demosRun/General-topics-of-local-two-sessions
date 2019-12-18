@@ -85,8 +85,8 @@ module.exports = {
       src: "http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js"
     },
     {
-      name: "idangerous.swiper2.7.6.min",
-      src: "./src/resource/idangerous.swiper2.7.6.min.js"
+      name: "swiper.4.5.0.min",
+      src: "./src/resource/swiper.4.5.0.min.js"
     },
     {
       name: "ThreeWebGL",
@@ -114,8 +114,8 @@ module.exports = {
       resource: true
     },
     {
-      name: "idangerous.swiper2.7.6",
-      src: "./src/resource/idangerous.swiper2.7.6.css",
+      name: "swiper.4.5.0.min",
+      src: "./src/resource/swiper.4.5.0.min.css",
     },
     // {
     //   name: "idangerous.swiper.3dflow",
@@ -135,6 +135,22 @@ module.exports = {
     {
       name: 'three',
       src: './src/page/three.owo'
+    },
+    {
+      name: 'four',
+      src: './src/page/four.owo'
+    },
+    {
+      name: 'five',
+      src: './src/page/five.owo'
+    },
+    {
+      name: 'six',
+      src: './src/page/six.owo'
+    },
+    {
+      name: 'seven',
+      src: './src/page/seven.owo'
     },
   ],
   // 调试模式配置

@@ -421,40 +421,168 @@ li {
   top: 0;
   bottom: 10%;
   margin: auto;
+}.owo-hover-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
 }
-/* 页面切换动画 */
-.o-page-scaleDownCenter {
-	-webkit-animation: scaleDownCenter .4s ease-in both;
-	-moz-animation: scaleDownCenter .4s ease-in both;
-	animation: scaleDownCenter .4s ease-in both;
+.owo-hover-grow:hover, .owo-hover-grow:focus, .owo-hover-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-@-webkit-keyframes scaleDownCenter {
-	to { opacity: 0; -webkit-transform: scale(.7); }
+.card-swiper-box {
+  width: 1000px;
+  height: 630px;
 }
-@-moz-keyframes scaleDownCenter {
-	to { opacity: 0; -moz-transform: scale(.7); }
+
+.card-swiper-box .swiper-container {
+  width: 840px;
+  height: 630px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
-@keyframes scaleDownCenter {
-	to { opacity: 0; transform: scale(.7); }
+
+.card-swiper-box .swiper-slide {
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
 }
-.o-page-scaleUpCenter {
-	-webkit-animation: scaleUpCenter .4s ease-out both;
-	-moz-animation: scaleUpCenter .4s ease-out both;
-	animation: scaleUpCenter .4s ease-out both;
+
+.card-swiper-box .swiper-slide img {
+  width: 100%;
+  height: 100%;
 }
-@-webkit-keyframes scaleUpCenter {
-	from { opacity: 0; -webkit-transform: scale(.7); }
+
+.card-swiper-box .swiper-slide .text {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 96%;
+  color: white;
+  padding: 0 2%;
+  height: 25px;
+  line-height: 25px;
 }
-@-moz-keyframes scaleUpCenter {
-	from { opacity: 0; -moz-transform: scale(.7); }
+
+.card-swiper-box .swiper-wrapper {
+  height: 100%;
 }
-@keyframes scaleUpCenter {
-	from { opacity: 0; transform: scale(.7); }
+
+.card-swiper-box .swiper-slide-box {
+  margin: 7%;
+  width: 86%;
+  height: 86%;
+  cursor: pointer;
+  position: relative;
 }
-.o-page-delay400 {
-	-webkit-animation-delay: .4s !important;
-	-moz-animation-delay: .4s !important;
-	animation-delay: .4s !important;
+
+.card-swiper-box .tool-bar {
+  position: absolute;
+  left: 3%;
+  top: 40%;
 }
+
+.card-swiper-box .tool-bar img {
+  display: block;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.card-swiper-box .index-box {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  bottom: 10%;
+  left: 3%;
+  line-height: 60px;
+  font-family: "Microsoft YaHei";
+  font-size: 27px;
+  font-weight: bold;
+  color: #0b7fd3;
+  letter-spacing: 8px;
+  background-image: url("../resource/index-box-bg.png");
+}
+.four .box {
+  height: 720px;
+}
+.card-swiper-box-9 {
+  width: 1000px;
+  height: 630px;
+  position: relative;
+}
+
+.card-swiper-box-9 .swiper-container {
+  width: 1000px;
+  height: 580px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.card-swiper-box-9 .swiper-slide {
+  height: 33.33%;
+  overflow: hidden;
+}
+
+.card-swiper-box-9 .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-swiper-box-9 .swiper-slide .text {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 96%;
+  color: white;
+  padding: 0 2%;
+  height: 25px;
+  line-height: 25px;
+  background-image: url("../resource/play.png");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 98% center;
+}
+
+.card-swiper-box-9 .swiper-wrapper {
+  height: 100%;
+}
+
+.card-swiper-box-9 .swiper-slide-box {
+  margin: 7%;
+  width: 86%;
+  height: 86%;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-swiper-box-9 .tool-bar {
+  position: absolute;
+  right: 0;
+  bottom: -7%;
+  display: -webkit-box;
+  display: flex;
+}
+
+.card-swiper-box-9 .tool-bar img {
+  display: block;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.five .box {
+  height: 720px;
+}
+
+
 

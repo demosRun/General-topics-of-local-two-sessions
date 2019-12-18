@@ -1,0 +1,15 @@
+<template lang="pug">
+.seven
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+    }
+  }
+</script>
+
+
+<style lang="less">
+
+</style>
