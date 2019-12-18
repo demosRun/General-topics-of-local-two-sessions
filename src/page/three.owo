@@ -1,0 +1,340 @@
+<template lang="pug">
+.three
+  .box
+    img(src="@|page-logo.png|")
+    //- 顶部切换按钮
+    .switch-bar.clear
+      .switch-bar-item.fl.active(:tap="changeItem('table')") 表格形式
+      .switch-bar-item.fl(:tap="changeItem('calendar')") 日历形式
+    .table-box(o-show="this.data.showBox === 'table'")
+      .title-bar.clear
+        .left.clear
+          .title-bar-item 省会
+          .title-bar-item 人大会时间
+          .title-bar-item 政协会时间
+        .right.clear
+          .title-bar-item.line 省会
+          .title-bar-item 人大会时间
+          .title-bar-item 政协会时间
+      ul.body-bar.clear
+        li(:for="item in 32")
+          .name 北京
+          .time-1 01.10～02.10
+          .time-2 01.10～02.10
+    .calendar-box(o-show="this.data.showBox === 'calendar'")
+      h2 内蒙古
+      .title-link
+        a(href="#") 进入分专题 >>
+      img.show-img
+      ul.clear
+        li
+          a(href="http://www.people.com.cn/") 北京
+          img(src="@|test.png|")
+        li
+          a 天津
+          img(src="@|test.png|")
+        li
+          a 河北
+          img(src="@|test.png|")
+        li
+          a 山西
+          img(src="@|test.png|")
+        li
+          a 内蒙古
+          img(src="@|test.png|")
+        li
+          a 辽宁
+          img(src="@|test.png|")
+        li
+          a 吉林
+          img(src="@|test.png|")
+        li
+          a 黑龙江
+          img(src="@|test.png|")
+        li
+          a 上海
+          img(src="@|test.png|")
+        li
+          a 江苏
+          img(src="@|test.png|")
+        li
+          a 浙江
+          img(src="@|test.png|")
+        li
+          a 安徽
+          img(src="@|test.png|")
+        li
+          a 福建
+        li
+          a 江西
+          img(src="@|test.png|")
+        li
+          a 山东
+          img(src="@|test.png|")
+        li
+          a 河南
+          img(src="@|test.png|")
+        li
+          a 湖北
+          img(src="@|test.png|")
+        li
+          a 湖南
+          img(src="@|test.png|")
+        li
+          a 广东
+          img(src="@|test.png|")
+        li
+          a 广西
+          img(src="@|test.png|")
+        li
+          a 海南
+          img(src="@|test.png|")
+        li
+          a 重庆
+          img(src="@|test.png|")
+        li
+          a 四川
+          img(src="@|test.png|")
+        li
+          a 贵州
+          img(src="@|test.png|")
+        li
+          a 云南
+          img(src="@|test.png|")
+        li
+          a 西藏
+          img(src="@|test.png|")
+        li
+          a 陕西
+          img(src="@|test.png|")
+        li
+          a 甘肃
+          img(src="@|test.png|")
+        li
+          a 青海
+          img(src="@|test.png|")
+        li
+          a 宁夏
+          img(src="@|test.png|")
+        li
+          a 新疆
+          img(src="@|test.png|")
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      showBox: "table"
+    },
+    created: function () {
+      owo.tool.touch({
+        el: this.$el,
+        end: function (e) {
+          if (e.swipe[1] < -100) {
+            owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+          }
+        }
+      })
+      // 计算表格的样式
+      let ind = 0
+      const list = owo.query('.body-bar li')
+      for (const key in list) {
+        if (list.hasOwnProperty(key)) {
+          const element = list[key]
+        }
+      }
+      // 为页面中的li添加点击事件
+      const calendarList = owo.query('.calendar-box ul li')
+      function clearLiActive () {
+        for (const key in calendarList) {
+          if (calendarList.hasOwnProperty(key)) {
+            const element = calendarList[key];
+            element.classList.remove('active')
+          }
+        }
+      }
+      // 点击地区li事件
+      function activeLi (target) {
+        // 清除所有li的活跃样式
+        clearLiActive()
+        target.classList.add('active')
+        owo.query('.calendar-box h2')[0].innerHTML = target.getElementsByTagName('a')[0].innerHTML
+        if (owo.query('.calendar-box .title-link a')[0]) {
+          owo.query('.calendar-box .title-link a')[0].href = target.getElementsByTagName('a')[0].href
+          owo.query('.calendar-box .show-img')[0].src = target.getElementsByTagName('img')[0].src
+        }
+      }
+      for (const key in calendarList) {
+        if (calendarList.hasOwnProperty(key)) {
+          const element = calendarList[key];
+          element.onclick = function (e) {
+            activeLi(e.target)
+          }
+        }
+      }
+      // 默认显示第一个
+      activeLi(calendarList[0])
+    },
+    changeItem: function (name) {
+      owo.tool.change(this, 'showBox', name)
+      const switchList = owo.query('.switch-bar-item')
+      for (const key in switchList) {
+        if (switchList.hasOwnProperty(key)) {
+          const element = switchList[key];
+          element.classList.remove('active')
+        }
+      }
+      this.$target.classList.add('active')
+    }
+  }
+</script>
+
+
+<style lang="less">
+.switch-bar {
+  width: 310px;
+  height: 45px;
+  border: 1px solid #0b7fd3;
+  .active {
+    background-color: #0b7fd3;
+    color: white;
+  }
+}
+.switch-bar-item {
+  width: 50%;
+  line-height: 45px;
+  text-align: center;
+  font-size: 20px;
+  color: #0b7fd3;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.switch-bar  {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+.body-bar {
+  background-color: white;
+  box-shadow: 1px 1px 8px #ccc;
+}
+.title-bar {
+  background-color: #d72d12;
+  color: white;
+  line-height: 40px;
+  .left, .right {
+    width: 499px;
+    float: left;
+  }
+  .right {
+    border-left: 1px solid #fbb3a9;
+  }
+}
+.title-bar-item {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.body-bar {
+  li {
+    width: 499px;
+    float: left;
+    line-height: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #333;
+    div {
+      float: left;
+      width: 33.33%;
+      text-align: center;
+    }
+  }
+  li:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+  }
+  li:nth-child(4n), li:nth-child(4n - 1) {
+    background: #faf5f5;
+  }
+  li:nth-child(2n) {
+    border-left: 1px solid #fbb3a9;
+  }
+}
+.calendar-box {
+  width: 1022px;
+  height: 643px;
+  position: relative;
+  margin-left: -10px;
+  background-image: url('@|calendar.png|');
+  h2 {
+    color: #333333;
+    font-size: 32px;
+    font-family: "Microsoft YaHei";
+    position: absolute;
+    left: 85px;
+    top: 57px;
+  }
+  ul {
+    position: absolute;
+    bottom: 85px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #333333;
+    width: 920px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    li {
+      float: left;
+      width: 56px;
+      cursor: pointer;
+      text-align: center;
+      a {
+        height: 20px;
+        margin: 10px 0;
+        line-height: 20px;
+        user-select: none;
+        display: block;
+        pointer-events: none;
+        border-right: 1px solid #ccc;
+      }
+      img {
+        display: none;
+      }
+    }
+    .active {
+      a {
+        color: white;
+        background-color: #ce2a12;
+      }
+    }
+  }
+}
+.title-link {
+  font-size: 23px;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 200px;
+  top: 50px;
+  a {
+    display: block;
+  }
+}
+.show-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 10%;
+  margin: auto;
+}
+</style>

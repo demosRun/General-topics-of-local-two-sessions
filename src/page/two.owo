@@ -1,0 +1,71 @@
+<template lang="pug">
+.two
+  .box
+    img(src="@|page-logo.png|")
+    h1
+      a(href="#") 内蒙古第二十届人民代表大会1月31日内蒙古第二十届人民代表大会日
+    .content-box.clear
+      .left.fl
+        plug(_name="ProgressBarSwiper" _src="https://owo.ink/public/33c14955e58bc9beadf93b1015fdbe5b.page")
+      .right.fl
+        h2
+          a(href="#") 解读2020政府工作报告释放哪些信号
+        plug(_name="newsList" _src="./src/module/newsList.owo")
+        img.line(src="@|line.png|")
+        h2
+          a(href="#") 解读2020政府工作报告释放哪些信号
+        plug(_name="newsList" _src="./src/module/newsList.owo")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.touch({
+        el: this.$el,
+        end: function (e) {
+          if (e.swipe[1] < -100) {
+            owo.go('three', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+          }
+        }
+      })
+    }
+  }
+</script>
+
+
+<style lang="less">
+h1 {
+  color: #c01a23;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: "Microsoft YaHei";
+}
+.left {
+  width: 525px;
+  height: 395px;
+}
+.right {
+  width: 435px;
+  height: 395px;
+  margin-left: 40px;
+}
+.content-box {
+  margin-top: 30px;
+}
+.line {
+  margin: 13px 0;
+  display: block;
+}
+h2 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  font-family: "Microsoft YaHei";
+}
+.news-list {
+  height: 144px;
+  overflow: hidden;
+}
+</style>

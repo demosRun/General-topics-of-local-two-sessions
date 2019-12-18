@@ -1,0 +1,52 @@
+<template lang="pug">
+.one
+  plug(_name="floatCloud" _src="./src/module/floatCloud.owo")
+  img.main-img(src="@|main.png|")
+  img.build(src="@|build.png|")
+  img.logo(src="@|logo.png|")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.touch({
+        el: this.$el,
+        end: function (e) {
+          if (e.swipe[1] < -100) {
+            owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+          }
+        }
+      })
+    }
+  }
+</script>
+
+
+<style lang="less">
+.main-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10%;
+  bottom: 0;
+  margin: auto;
+}
+.build {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.logo {
+  position: absolute;
+  right: -50%;
+  top: 10%;
+  left: 0;
+  margin: auto;
+}
+img {
+  user-select: none;
+  pointer-events: none;
+}
+</style>

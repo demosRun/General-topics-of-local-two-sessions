@@ -1,0 +1,45 @@
+<template lang="pug">
+ul.news-list
+  li
+    a(href="#" target="_blank") 告释放哪些“十三五”发展信十三五”发展信号的解
+  li
+    a(href="#" target="_blank") 告释放哪些“十三五”发展信十三五”发展信号的解
+  li
+    a(href="#" target="_blank") 告释放哪些“十三五”发展信十三五”发展信号的解
+  li
+    a(href="#" target="_blank") 告释放哪些“十三五”发展信十三五”发展信号的解
+  li
+    a(href="#" target="_blank") 告释放哪些“十三五”发展信十三五”发展信号的解
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.touch({
+        el: this.$el,
+        end: function (e) {
+          if (e.swipe[1] < -100) {
+            owo.go('three', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+          }
+        }
+      })
+    }
+  }
+</script>
+
+
+<style lang="less">
+li {
+  background-image: url(@|icon.png|);
+  background-repeat: no-repeat;
+  line-height: 38px;
+  height: 38px;
+  overflow: hidden;
+  padding-left: 20px;
+  background-position: 5px center;
+  background-position-x: 5px;
+  background-position-y: center;
+  color: #222222;
+  font-size: 18px;
+}
+</style>

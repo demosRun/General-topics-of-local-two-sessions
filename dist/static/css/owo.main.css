@@ -1,0 +1,460 @@
+body, html, .owo, .page-box {
+  padding: 0;
+  margin: 0;
+}
+
+.owo-animation {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.owo-animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owo-animation-forward {
+  z-index: 99;
+}
+
+
+a {
+  color: #333;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+
+/* 清除浮动 */
+.clear:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  zoom: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.float-cloud {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.one .main-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10%;
+  bottom: 0;
+  margin: auto;
+}
+
+.one .build {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.one .logo {
+  position: absolute;
+  right: -50%;
+  top: 10%;
+  left: 0;
+  margin: auto;
+}
+
+.one img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+.swiper-box {
+  height: 395px;
+  overflow: hidden;
+  width: 525px;
+  margin: 0 auto;
+}
+
+.swiper-box .swiper-wrapper .text {
+  position: absolute;
+  bottom: 6px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  line-height: 30px;
+  padding: 0 2%;
+  width: 96%;
+  font-size: 14px;
+}
+
+.swiper-box .swiper-container {
+  width: 100%;
+  height: 395px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper-box .swiper-pagination-switch {
+  height: 6px;
+  display: block;
+  background-color: black;
+  position: relative;
+  cursor: pointer;
+  float: left;
+}
+
+.swiper-box .swiper-active-switch {
+  background-color: #064cc0;
+}
+
+.swiper-box a {
+  text-decoration: none;
+}
+
+.swiper-box .swiper-slide {
+  position: relative;
+}
+
+.swiper-box .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-box .pagination {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 6px;
+  width: 100%;
+  background-color: black;
+  z-index: 9;
+}
+
+.swiper-box .previou {
+  position: absolute;
+  width: auto;
+  height: auto;
+  bottom: 10px;
+  right: 70px;
+  cursor: pointer;
+}
+
+.swiper-box .index {
+  position: absolute;
+  bottom: 9px;
+  right: 26px;
+  color: white;
+  font-size: 18px;
+  line-height: 20px;
+  z-index: 9;
+  letter-spacing: 4px;
+}
+
+.swiper-box .back {
+  position: absolute;
+  right: 72px;
+  bottom: 9px;
+  color: white;
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.swiper-box .forward {
+  position: absolute;
+  right: 3px;
+  bottom: 9px;
+  color: white;
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+.news-list li {
+  background-image: url(../resource/icon.png);
+  background-repeat: no-repeat;
+  line-height: 38px;
+  height: 38px;
+  overflow: hidden;
+  padding-left: 20px;
+  background-position: 5px center;
+  background-position-x: 5px;
+  background-position-y: center;
+  color: #222222;
+  font-size: 18px;
+}
+.two h1 {
+  color: #c01a23;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: "Microsoft YaHei";
+}
+
+.two .left {
+  width: 525px;
+  height: 395px;
+}
+
+.two .right {
+  width: 435px;
+  height: 395px;
+  margin-left: 40px;
+}
+
+.two .content-box {
+  margin-top: 30px;
+}
+
+.two .line {
+  margin: 13px 0;
+  display: block;
+}
+
+.two h2 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  font-family: "Microsoft YaHei";
+}
+
+.two .news-list {
+  height: 144px;
+  overflow: hidden;
+}
+.three .switch-bar {
+  width: 310px;
+  height: 45px;
+  border: 1px solid #0b7fd3;
+}
+
+.three .switch-bar .active {
+  background-color: #0b7fd3;
+  color: white;
+}
+
+.three .switch-bar-item {
+  width: 50%;
+  line-height: 45px;
+  text-align: center;
+  font-size: 20px;
+  color: #0b7fd3;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.three .switch-bar {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.three .body-bar {
+  background-color: white;
+  box-shadow: 1px 1px 8px #ccc;
+}
+
+.three .title-bar {
+  background-color: #d72d12;
+  color: white;
+  line-height: 40px;
+}
+
+.three .title-bar .left,
+.three .title-bar .right {
+  width: 499px;
+  float: left;
+}
+
+.three .title-bar .right {
+  border-left: 1px solid #fbb3a9;
+}
+
+.three .title-bar-item {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.three .body-bar li {
+  width: 499px;
+  float: left;
+  line-height: 30px;
+  height: 30px;
+  font-size: 18px;
+  color: #333;
+}
+
+.three .body-bar li div {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+.three .body-bar li:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+.three .body-bar li:nth-child(4n),
+.three .body-bar li:nth-child(4n - 1) {
+  background: #faf5f5;
+}
+
+.three .body-bar li:nth-child(2n) {
+  border-left: 1px solid #fbb3a9;
+}
+
+.three .calendar-box {
+  width: 1022px;
+  height: 643px;
+  position: relative;
+  margin-left: -10px;
+  background-image: url('../resource/calendar.png');
+}
+
+.three .calendar-box h2 {
+  color: #333333;
+  font-size: 32px;
+  font-family: "Microsoft YaHei";
+  position: absolute;
+  left: 85px;
+  top: 57px;
+}
+
+.three .calendar-box ul {
+  position: absolute;
+  bottom: 85px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #333333;
+  width: 920px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.three .calendar-box ul li {
+  float: left;
+  width: 56px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.three .calendar-box ul li a {
+  height: 20px;
+  margin: 10px 0;
+  line-height: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: block;
+  pointer-events: none;
+  border-right: 1px solid #ccc;
+}
+
+.three .calendar-box ul li img {
+  display: none;
+}
+
+.three .calendar-box ul .active a {
+  color: white;
+  background-color: #ce2a12;
+}
+
+.three .title-link {
+  font-size: 23px;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 200px;
+  top: 50px;
+}
+
+.three .title-link a {
+  display: block;
+}
+
+.three .show-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 10%;
+  margin: auto;
+}
+/* 页面切换动画 */
+.o-page-scaleDownCenter {
+	-webkit-animation: scaleDownCenter .4s ease-in both;
+	-moz-animation: scaleDownCenter .4s ease-in both;
+	animation: scaleDownCenter .4s ease-in both;
+}
+
+@-webkit-keyframes scaleDownCenter {
+	to { opacity: 0; -webkit-transform: scale(.7); }
+}
+@-moz-keyframes scaleDownCenter {
+	to { opacity: 0; -moz-transform: scale(.7); }
+}
+@keyframes scaleDownCenter {
+	to { opacity: 0; transform: scale(.7); }
+}
+.o-page-scaleUpCenter {
+	-webkit-animation: scaleUpCenter .4s ease-out both;
+	-moz-animation: scaleUpCenter .4s ease-out both;
+	animation: scaleUpCenter .4s ease-out both;
+}
+@-webkit-keyframes scaleUpCenter {
+	from { opacity: 0; -webkit-transform: scale(.7); }
+}
+@-moz-keyframes scaleUpCenter {
+	from { opacity: 0; -moz-transform: scale(.7); }
+}
+@keyframes scaleUpCenter {
+	from { opacity: 0; transform: scale(.7); }
+}
+.o-page-delay400 {
+	-webkit-animation-delay: .4s !important;
+	-moz-animation-delay: .4s !important;
+	animation-delay: .4s !important;
+}
+
