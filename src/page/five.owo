@@ -3,18 +3,154 @@
   .box
     img.page-logo(src="@|page-logo.png|")
     plug(_name="cardSwiper2" _src="./src/module/cardSwiper2.owo")
+    .tab-bar.clear
+      .tab-bar-item.active(:tap="changepage")
+        .text 第一页
+        .swiper-wrapper
+          .swiper-slide(:for="item in data._swiperBoxList" o-hover="grow")
+            .swiper-slide-box
+              img(src="{{item.src}}" width="525" height="395")
+              .text {{item.text}}
+      .tab-bar-item(:tap="changepage")
+        .text 第二页
+        .swiper-wrapper
+          .swiper-slide(:for="item in data._swiperBoxList2" o-hover="grow")
+            .swiper-slide-box
+              img(src="{{item.src}}" width="525" height="395")
+              .text {{item.text}}
+      .tab-bar-item(:tap="changepage")
+        .text 第三页
+      .tab-bar-item(:tap="changepage")
+        .text 第四页
+      .tab-bar-item(:tap="changepage")
+        .text 第五页
+      .tab-bar-item(:tap="changepage")
+        .text 第六页
 </template>
 
 <script>
   module.exports = {
+    data: {
+      _swiperBoxList: [
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+      ],
+      _swiperBoxList2: [
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "第二页内容"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
+      ]
+    },
     created: function () {
+      setTimeout(() => {
+        if (owo.query('.tab-bar-item')[0]) {
+          this.changepage(owo.query('.tab-bar-item')[0])
+        }
+      }, 0);
+    },
+    changepage: function (item) {
+      const target = item ? item : this.$target
+      const swiperBox = target.getElementsByClassName('swiper-wrapper')[0]
+      if (swiperBox) {
+        const showSwiper = owo.query('.card-swiper-box-9 .swiper-wrapper')[0]
+        if (showSwiper) {
+          showSwiper.innerHTML = swiperBox.innerHTML
+          owo.script.five.template.cardSwiper2.data.swiper.updateSlides()
+          // 给当前标签设置活跃样式
+          owo.tool.each(owo.query('.tab-bar-item'), function (item) {
+            item.classList.remove('active')
+          })
+          target.classList.add('active')
+        }
+      }
+      
     }
   }
 </script>
 
-
 <style lang="less">
 .box {
   height: 720px;
+}
+.tab-bar {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  .tab-bar-item {
+    float: left;
+    width: 100px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border: 2px solid #0078c8;
+    margin-right: -2px;
+    font-size: 20px;
+    color: #0078c8;
+    cursor: pointer;
+    .swiper-wrapper {
+      display: none;
+    }
+  }
+  .text {
+    user-select: none;
+    pointer-events: none;
+  }
+  .active {
+    color: white;
+    background-color: #0078c8;
+  }
 }
 </style>

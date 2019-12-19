@@ -1,14 +1,6 @@
 <template lang="pug">
 ul.news-list
-  li
-    a(href="#" target="_blank") 告释放哪些“十三五”发展信十三五”发展信号的解
-  li
-    a(href="#" target="_blank") 告释放哪些“十三五”发展信十三五”发展信号的解
-  li
-    a(href="#" target="_blank") 告释放哪些“十三五”发展信十三五”发展信号的解
-  li
-    a(href="#" target="_blank") 告释放哪些“十三五”发展信十三五”发展信号的解
-  li
+  li(:for="item in 6")
     a(href="#" target="_blank") 告释放哪些“十三五”发展信十三五”发展信号的解
 </template>
 
@@ -19,7 +11,7 @@ ul.news-list
         el: this.$el,
         end: function (e) {
           if (e.swipe[1] < -100) {
-            owo.go('three', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+            owo.go('seven', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
           }
         }
       })

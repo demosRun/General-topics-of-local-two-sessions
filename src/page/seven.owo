@@ -1,5 +1,9 @@
 <template lang="pug">
 .seven
+  .box
+    img.page-logo(src="@|page-logo.png|")
+    .bookshelf-box
+      plug(_name="cardSwiper3" _src="./src/module/cardSwiper3.owo")
 </template>
 
 <script>
@@ -11,5 +15,14 @@
 
 
 <style lang="less">
-
+.bookshelf-box {
+  width: 1004px;
+  height: 567px;
+  position: absolute;
+  bottom: 0;
+  background-image: url('@|bookshelf.png|');
+}
+.box {
+  height: 740px;
+}
 </style>

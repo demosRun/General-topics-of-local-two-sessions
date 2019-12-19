@@ -2,58 +2,23 @@
 .card-swiper-box-9
   .swiper-container.clear
     .swiper-wrapper
-      .swiper-slide(:for="item in data._swiperBoxList" o-hover="grow")
-        .swiper-slide-box
-          img(src="{{item.src}}" width="525" height="395")
-          .text {{item.text}}
   .tool-bar
     img.back(src="@|back-2.png|" o-hover="grow" :tap="previou")
     img.forward(src="@|forward-2.png|" o-hover="grow" :tap="next")
+  
 </template>
 
 <script>
   module.exports = {
     data: {
-      swiper: null,
-      _swiperBoxList: [
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-        {src:"http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg", text: "全省“法治进校园”巡讲团首站——晋中"},
-      ]
+      swiper: null
     },
     created: function () {
-      // 轮播图展示区域swiper
-      setTimeout(() => {
-        this.data.swiper = new Swiper(this.$el.getElementsByClassName('swiper-container')[0], {
-          slidesPerView: 3,
-          slidesPerGroup : 3,
-          slidesPerColumn: 3
-        })
-      }, 0)
+      this.data.swiper = new Swiper(this.$el.getElementsByClassName('swiper-container')[0], {
+        slidesPerView: 3,
+        slidesPerGroup : 3,
+        slidesPerColumn: 3
+      })
     },
     previou: function () {
       this.data.swiper.slidePrev()

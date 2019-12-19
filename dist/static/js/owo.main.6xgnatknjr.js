@@ -1,4 +1,4 @@
-// Wed Dec 18 2019 22:45:10 GMT+0800 (GMT+08:00)
+// Thu Dec 19 2019 16:40:35 GMT+0800 (GMT+08:00)
 var owo = {tool: {},state: {},};
 /* 方法合集 */
 var _owo = {}
@@ -89,9 +89,9 @@ _owo.handleEvent = function (tempDom, templateName, moudleScript) {
     for (var ind = 0; ind < tempDom.attributes.length; ind++) {
       var attribute = tempDom.attributes[ind]
       // 判断是否为owo的事件
-      // ie不支持startsWith
-      var eventFor = attribute.textContent || attribute.value
       if (attribute.name[0] == ':') {
+        // ie不支持startsWith
+        var eventFor = attribute.textContent || attribute.value
         var eventName = attribute.name.slice(1)
         switch (eventName) {
           case 'tap': {
@@ -111,6 +111,7 @@ _owo.handleEvent = function (tempDom, templateName, moudleScript) {
         }
       } else {
         if (attribute.name === 'o-show') {
+          var eventFor = attribute.textContent || attribute.value
           // 初步先简单处理吧
           var temp = eventFor.replace(/ /g, '')
           function tempRun (temp) {
@@ -254,6 +255,14 @@ _owo.showPage = function() {
     window.owo.activePage = page
     _owo.handlePage(owo.script[page], entryDom)
     _owo.handleEvent(entryDom, null, owo.script[page])
+    // 处理插件
+    var plugList = document.getElementsByClassName('owo-plug')
+    for (var ind = 0; ind < plugList.length; ind++) {
+      var plugEL = plugList[ind]
+      var plugName = plugEL.getAttribute('template')
+      _owo.handlePage(owo.script[plugName], plugEL)
+      _owo.handleEvent(plugEL, null, owo.script[plugName])
+    }
   } else {
     console.error('未设置程序入口!')
   }
@@ -348,6 +357,38 @@ _owo._event_tap = function (tempDom, callBack) {
     isMove = false
   })
 }
+/**
+ * 赋予节点动画效果
+ * @param  {string} name 动画效果名称
+ * @param  {dom} dom 节点
+ */
+owo.tool.animate = function (name, dom, delay) {
+  dom.classList.add(name)
+  dom.classList.add('owo-animated')
+  if (delay) {
+    dom.style.animationDelay = delay + 'ms'
+  }
+  // 待优化可以单独提出绑定方法
+  dom.addEventListener('animationend', animateEnd)
+  function animateEnd () {
+    // 待优化 感觉不需要这样
+    dom.classList.remove(name)
+    dom.classList.remove('owo-animated')
+    if (delay) {
+      dom.style.animationDelay = ''
+    }
+  }
+}
+/**
+ * 遍历对象
+ * @return {object} 屏幕信息
+ */
+
+owo.tool.each = function (obj, fn) {
+  for (var ind = 0; ind < obj.length; ind++) {
+    fn(obj[ind], ind)
+  }
+}
 
 /**
  * 滑动检测
@@ -437,48 +478,122 @@ owo.tool.change = function (environment, key, value) {
 
 
 
+// 切换页面动画
+function animation (oldDom, newDom, animationIn, animationOut, forward) {
+  // 动画延迟
+  var delay = 0
+  // 获取父元素
+  var parentDom = newDom.parentElement
+  if (!oldDom) {
+    console.error('旧页面不存在!')
+  }
+  oldDom.addEventListener("animationend", oldDomFun)
+  newDom.addEventListener("animationend", newDomFun)
+  
+  oldDom.style.position = 'absolute'
 
-// 这是用于代码调试的自动刷新代码，他不应该出现在正式上线版本!
-if ("WebSocket" in window) {
-  // 打开一个 web socket
-  if (!window._owo.ws) window._owo.ws = new WebSocket("ws://" + window.location.host)
-  window._owo.ws.onmessage = function (evt) { 
-    if (evt.data == 'reload') {
-      location.reload()
+  newDom.style.display = 'block'
+  newDom.style.position = 'absolute'
+  // 给即将生效的页面加上“未来”标识
+  if (forward) {
+    newDom.classList.add('owo-animation-forward')
+  } else {
+    oldDom.classList.add('owo-animation-forward')
+  }
+  // document.body.style.overflow = 'hidden'
+
+  parentDom.style.perspective = '1200px'
+  oldDom.classList.add('owo-animation')
+  for (var ind =0; ind < animationIn.length; ind++) {
+    var value = animationIn[ind]
+    //判断是否为延迟属性
+    if (value.startsWith('delay')) {
+      var tempDelay = parseInt(value.slice(5))
+      if (delay < tempDelay)  delay = tempDelay
+    }
+    oldDom.classList.add('o-page-' + value)
+  }
+
+  newDom.classList.add('owo-animation')
+  for (var ind =0; ind < animationOut.length; ind++) {
+    var value = animationOut[ind]
+    if (value.startsWith('delay')) {
+      var tempDelay = parseInt(value.slice(5))
+      if (delay < tempDelay)  delay = tempDelay
+    }
+    newDom.classList.add('o-page-' + value)
+  }
+  // 旧DOM执行函数
+  function oldDomFun (e) {
+    // 排除非框架引起的结束事件
+    if (e.target.getAttribute('template')) {
+      // 移除监听
+      oldDom.removeEventListener('animationend', oldDomFun, false)
+      // 延迟后再清除，防止动画还没完成
+      setTimeout(function () {
+        oldDom.style.display = 'none'
+        // console.log(oldDom)
+        oldDom.style.position = ''
+        oldDom.classList.remove('owo-animation')
+        oldDom.classList.remove('owo-animation-forward')
+        parentDom.style.perspective = ''
+        // 清除临时设置的class
+        for (var ind =0; ind < animationIn.length; ind++) {
+          var value = animationIn[ind]
+          oldDom.classList.remove('o-page-' + value)
+        }
+      }, delay);
     }
   }
-  window._owo.ws.onclose = function() { 
-    console.info('与服务器断开连接')
+
+  // 新DOM执行函数
+  function newDomFun () {
+    // 移除监听
+    newDom.removeEventListener('animationend', newDomFun, false)
+    // 延迟后再清除，防止动画还没完成
+    setTimeout(function () {
+      // 清除临时设置的style
+      newDom.style.position = '';
+      newDom.classList.remove('owo-animation');
+      newDom.classList.remove('owo-animation-forward');
+      for (var ind =0; ind < animationOut.length; ind++) {
+        var value = animationOut[ind]
+        newDom.classList.remove('o-page-' + value);
+      }
+    }, delay);
   }
-} else {
-  console.error('浏览器不支持WebSocket')
 }
 
 
-
-
-
-
-
+// 切换页面前的准备工作
 function switchPage (oldUrlParam, newUrlParam) {
   var oldPage = oldUrlParam ? oldUrlParam.split('&')[0] : owo.entry
   var newPage = newUrlParam ? newUrlParam.split('&')[0] : owo.entry
-  // 查找页面跳转前的page页(dom节点)
-  var oldDom = document.querySelector('[template=' + oldPage + ']')
+  // console.log(oldPage, newPage)
+  var oldDom = document.querySelector('.owo[template="' + oldPage + '"]')
   var newDom = document.querySelector('.owo[template="' + newPage + '"]')
   
   if (!newDom) {
     console.error('页面不存在!')
     return
   }
-
-  if (oldDom) {
-    // 隐藏掉旧的节点
-    oldDom.style.display = 'none'
+  // console.log(owo.state.animation)
+  // 判断是否有动画效果
+  if (!owo.script[newPage]._animation) owo.script[newPage]._animation = {}
+  // 直接.in会在ie下报错
+  var animationIn = owo.script[newPage]._animation['in']
+  var animationOut = owo.script[newPage]._animation['out']
+  if (animationIn || animationOut) {
+    owo.state.animation = {}
+    animation(oldDom, newDom, animationIn.split('&&'), animationOut.split('&&'), owo.state.animation['forward'])
+  } else {
+    if (oldDom) {
+      // 隐藏掉旧的节点
+      oldDom.style.display = 'none'
+    }
+    // 查找页面跳转后的page
+    newDom.style.display = 'block'
   }
-
-  newDom.style.display = 'block'
-  // 查找页面跳转后的page
   
   window.owo.activePage = newPage
   // 不可调换位置

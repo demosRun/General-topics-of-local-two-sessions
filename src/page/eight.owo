@@ -1,0 +1,322 @@
+<template lang="pug">
+.eight
+  .box
+    img.page-logo(src="@|page-logo.png|")
+    .people-box
+      h2 内蒙古
+      .title-link
+        a(href="#") 进入分专题 >>
+      .people-card-box.clear
+        .people-card.fl(o-hover="grow")
+          a(href="#")
+            img(src="@|people.png|")
+            .title 省委书记
+            .name 王卫东
+        .people-card.fl(o-hover="grow")
+          a(href="#")
+            img(src="@|people.png|")
+            .title 省委书记
+            .name 王卫东
+        .people-card.fl(o-hover="grow")
+          a(href="#")
+            img(src="@|people.png|")
+            .title 省委书记
+            .name 王卫东
+        .people-card.fl(o-hover="grow")
+          a(href="#")
+            img(src="@|people.png|")
+            .title 省委书记
+            .name 王卫东
+      ul.clear
+        li
+          a.city(href="http://www.people.com.cn/") 北京
+          .people-card-box-edit
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="http://ldzl.people.com.cn/dfzlk/image/upload/20171026_tw7cBXSYEYTI4ICuApAcb5xsgA1zMF15.jpg")
+                .title 市委书记
+                .name 蔡奇
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_zHHMpxkdnPlUh6XGLpL087X5mv4A74KK.jpg")
+                .title 市人大主任
+                .name 李伟
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_srsIsUOMFmKXe5orzMrJTnnwxNgkEsHj.jpg")
+                .title 市长
+                .name 陈吉宁
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_t530tc9KTi0nRAwjYPJhzpEkKZNmJnbZ.jpg")
+                .title 市政协主席
+                .name 吉林
+        li
+          a.city 天津
+          .people-card-box-edit
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="@|people.png|")
+                .title 省委书记
+                .name 王卫东2
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="@|people.png|")
+                .title 省委书记
+                .name 王卫东2
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="@|people.png|")
+                .title 省委书记
+                .name 王卫东2
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="@|people.png|")
+                .title 省委书记
+                .name 王卫东2
+        li
+          a.city 河北
+          .people-card-box-edit
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="@|people.png|")
+                .title 省委书记
+                .name 王卫东2
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="@|people.png|")
+                .title 省委书记
+                .name 王卫东2
+            .people-card.fl(o-hover="grow")
+              a(href="#")
+                img(src="@|people.png|")
+                .title 省委书记
+                .name 王卫东2
+        li
+          a.city 山西
+          .people-card-box-edit
+        li
+          a.city 内蒙古
+          .people-card-box-edit
+        li
+          a.city 辽宁
+          .people-card-box-edit
+        li
+          a.city 吉林
+          .people-card-box-edit
+        li
+          a.city 黑龙江
+          .people-card-box-edit
+        li
+          a.city 上海
+          .people-card-box-edit
+        li
+          a.city 江苏
+          .people-card-box-edit
+        li
+          a.city 浙江
+          .people-card-box-edit
+        li
+          a.city 安徽
+          .people-card-box-edit
+        li
+          a.city 福建
+          .people-card-box-edit
+        li
+          a.city 江西
+          .people-card-box-edit
+        li
+          a.city 山东
+          .people-card-box-edit
+        li
+          a.city 河南
+          .people-card-box-edit
+        li
+          a.city 湖北
+          .people-card-box-edit
+        li
+          a.city 湖南
+          .people-card-box-edit
+        li
+          a.city 广东
+          .people-card-box-edit
+        li
+          a.city 广西
+          .people-card-box-edit
+        li
+          a.city 海南
+          .people-card-box-edit
+        li
+          a.city 重庆
+          .people-card-box-edit
+        li
+          a.city 四川
+          .people-card-box-edit
+        li
+          a.city 贵州
+          .people-card-box-edit
+        li
+          a.city 云南
+          .people-card-box-edit
+        li
+          a.city 西藏
+          .people-card-box-edit
+        li
+          a.city 陕西
+          .people-card-box-edit
+        li
+          a.city 甘肃
+          .people-card-box-edit
+        li
+          a.city 青海
+          .people-card-box-edit
+        li
+          a.city 宁夏
+          .people-card-box-edit
+        li
+          a.city 新疆
+          .people-card-box-edit
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      // 为页面中的li添加点击事件
+      const calendarList = owo.query('.people-box ul li')
+      function clearLiActive () {
+        for (const key in calendarList) {
+          if (calendarList.hasOwnProperty(key)) {
+            const element = calendarList[key];
+            element.classList.remove('active')
+          }
+        }
+      }
+      // 点击地区li事件
+      function activeLi (target) {
+        // 清除所有li的活跃样式
+        clearLiActive()
+        target.classList.add('active')
+        owo.query('.people-box h2')[0].innerHTML = target.getElementsByTagName('a')[0].innerHTML
+        if (owo.query('.people-box .title-link a')[0]) {
+          owo.query('.people-box .title-link a')[0].href = target.getElementsByTagName('a')[0].href
+        }
+        if (owo.query('.people-box .people-card-box')[0]) {
+          owo.query('.people-box .people-card-box')[0].innerHTML = target.getElementsByClassName('people-card-box-edit')[0].innerHTML
+        }
+      }
+      for (const key in calendarList) {
+        if (calendarList.hasOwnProperty(key)) {
+          const element = calendarList[key];
+          element.onclick = function (e) {
+            activeLi(e.target)
+          }
+        }
+      }
+      // 默认显示第一个
+      if (calendarList[0]) {
+        activeLi(calendarList[0])
+      }
+    }
+  }
+</script>
+
+
+<style lang="less">
+.box {
+  height: 610px;
+}
+ul {
+  line-height: 40px;
+  font-size: 18px;
+  color: #333333;
+  width: 920px;
+  margin: auto;
+  margin-top: 20px;
+  li {
+    float: left;
+    width: 56px;
+    cursor: pointer;
+    text-align: center;
+    a {
+      height: 20px;
+      margin: 10px 0;
+      line-height: 20px;
+      user-select: none;
+      display: block;
+      pointer-events: none;
+      border-right: 1px solid #ccc;
+    }
+    .people-card-box-edit {
+      display: none;
+    }
+  }
+  .active {
+    a {
+      color: white;
+      background-color: #ce2a12;
+    }
+  }
+}
+.people-card-box {
+  display: flex;
+  height: 340px;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 60px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+.people-card {
+  margin: 0 18px;
+  width: 165px;
+  overflow: hidden;
+  height: 325px;
+  background-color: #efefef;
+  box-shadow: 1px 1px 6px #ccc;
+  img, a {
+    display: block;
+    margin: 0 auto;
+  }
+  img {
+    height: 230px;
+  }
+  .title {
+    color: #c51e25;
+    font-size: 23px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+  }
+  .name {
+    text-align: center;
+    font-size: 24px;
+    color: #333333;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+}
+.page-logo {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.title-link {
+  font-size: 23px;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  a {
+    display: block;
+  }
+}
+h2 {
+  color: #333333;
+  font-size: 32px;
+  font-family: "Microsoft YaHei";
+  position: absolute;
+  right: 215px;
+  top: 37px;
+}
+</style>

@@ -20,18 +20,16 @@
 <script>
   module.exports = {
     created: function () {
-      owo.tool.touch({
-        el: this.$el,
-        end: function (e) {
-          if (e.swipe[1] < -100) {
-            owo.go('three', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
-          }
-        }
+      owo.tool.each(document.querySelectorAll('.menu li'), function (item) {
+        item.classList.remove('active')
       })
+      const link = document.querySelectorAll('.menu .to-two')[0]
+      if (link) {
+        link.classList.add('active')
+      }
     }
   }
 </script>
-
 
 <style lang="less">
 h1 {

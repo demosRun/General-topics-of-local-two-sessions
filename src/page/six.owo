@@ -1,16 +1,46 @@
 <template lang="pug">
 .six
+  .box
+    img.page-logo(src="@|page-logo.png|")
+    .marking-box
+      //- 二维码
+      img.qr-image(src="@|qr.png|")
+      plug(_name="rollNews" _src="./src/module/rollNews.owo")
 </template>
 
 <script>
   module.exports = {
     created: function () {
-      
     }
   }
 </script>
 
-
 <style lang="less">
-
+  .box {
+    height: 690px;
+  }
+  .marking-box {
+    width: 1038px;
+    height: 613px;
+    margin-left: -15px;
+    position: relative;
+    background-image: url('@|marking.png|');
+  }
+  .qr-image {
+    position: absolute;
+    right: 6%;
+    top: 21%;
+  }
+  .rolling-news {
+    position: absolute;
+    left: 5%;
+    top: 21%;
+    width: 32%;
+    height: 200px;
+    line-height: 17px;
+    li {
+      line-height: 36px;
+      height: 36px;
+    }
+  }
 </style>

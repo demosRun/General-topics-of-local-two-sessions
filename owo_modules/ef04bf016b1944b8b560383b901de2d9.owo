@@ -28,16 +28,23 @@
       // 轮播图展示区域swiper
       setTimeout(() => {
         this.data.swiper = new Swiper(owo.query('.swiper-1 .swiper-container')[0], {
-          pagination: owo.query('.swiper-1 .pagination')[0],
+          pagination: {
+            el: owo.query('.swiper-1 .pagination')[0],
+            type: 'progressbar'
+          },
           loop: true,
           autoplay: 3000,
           paginationClickable: true,
-          onSlideChangeStart: function (swiper) {
-            if (owo.query('.swiper-1 .index')[0]) {
-              let index = null
-              if (swiper.activeIndex <= slideListLength) index = swiper.activeIndex
-              else index = 1
-              owo.query('.swiper-1 .index')[0].innerText = index + '/' + slideListLength
+          on: {
+            slideChange: () => {
+              if (owo.query('.swiper-1 .index')[0]) {
+                let index = null
+                console.log(this.data.swiper)
+                if (!this.data.swiper) return
+                if (this.data.swiper.activeIndex <= slideListLength) index = this.data.swiper.activeIndex
+                else index = 1
+                owo.query('.swiper-1 .index')[0].innerText = index + '/' + slideListLength
+              }
             }
           }
         })
@@ -85,17 +92,6 @@
   }
 }
 
-.swiper-pagination-switch {
-  height: 6px;
-  display: block;
-  background-color: black;
-  position: relative;
-  cursor: pointer;
-  float: left;
-}
-.swiper-active-switch {
-  background-color: #064cc0;
-}
 a {
   text-decoration: none;
 }
@@ -106,14 +102,14 @@ a {
     height: 100%;
   }
 }
-.pagination{
-  position: absolute;
+.swiper-container .pagination{
   bottom: 0;
-  right: 0;
+  position: absolute;
+  margin: auto;
+  top: auto;
   height: 6px;
-  width: 100%;
+  z-index: 99;
   background-color: black;
-  z-index: 9;
 }
 .previou {
   position: absolute;

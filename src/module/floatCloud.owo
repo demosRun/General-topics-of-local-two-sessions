@@ -28,6 +28,7 @@
 			animate();
 
 			function init() {
+				isrun = true
 				container = box
 				camera = new THREE.Camera(30, window.innerWidth / window.innerHeight, 1, 3000);
 				camera.position.z = 6000;
@@ -96,7 +97,7 @@
 			}
 
 			function animate() {
-				requestAnimationFrame(animate);
+				if (isrun) requestAnimationFrame(animate);
 				render()
 			}
 

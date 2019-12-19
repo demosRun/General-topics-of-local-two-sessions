@@ -1,0 +1,65 @@
+<template lang="pug">
+ul.menu
+  li.to-one(:tap="goPage('one')") 封面
+  li.to-two.active(:tap="goPage('two')") 两会要闻
+  li.to-three(:tap="goPage('three')") 会期查询
+  li.to-eight(:tap="goPage('eight')") 领导人资料
+  li.to-seven(:tap="goPage('seven')") 政府工作报告
+  li.to-five(:tap="goPage('five')") 两会访谈
+  li.to-six(:tap="goPage('six')") 交卷时刻
+  li.to-four(:tap="goPage('four')") 高清组图
+</template>
+
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.each(document.querySelectorAll('.menu li'), function (item) {
+        item.classList.remove('active')
+      })
+      const link = document.querySelectorAll('.menu .to-' + owo.activePage)[0]
+      if (link) {
+        link.classList.add('active')
+      }
+    },
+    goPage: function (name) {
+      owo.tool.each(document.querySelectorAll('.menu li'), function (item) {
+        item.classList.remove('active')
+      })
+      this.$target.classList.add('active')
+      owo.go(name, 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+    }
+  }
+</script>
+
+<style lang="less">
+a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+li {
+  background-image: url("@|menu-li.png|");
+  line-height: 50px;
+  color: #5190bd;
+  font-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+.menu {
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  height: 350px;
+  font-size: 24px;
+}
+.active {
+  font-weight: bold;
+  background-image: url("@|menu-li-active.png|");
+}
+</style>

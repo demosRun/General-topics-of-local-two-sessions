@@ -152,6 +152,20 @@ module.exports = {
       name: 'seven',
       src: './src/page/seven.owo'
     },
+    {
+      name: 'eight',
+      src: './src/page/eight.owo'
+    },
+    {
+      name: 'leaving',
+      type: "plug",
+      src: './src/page/leaving.owo'
+    },
+    {
+      name: 'menu',
+      type: "plug",
+      src: './src/page/menu.owo'
+    },
   ],
   // 调试模式配置
   dev: {

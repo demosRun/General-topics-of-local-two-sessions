@@ -4,8 +4,8 @@
     img(src="@|page-logo.png|")
     //- 顶部切换按钮
     .switch-bar.clear
-      .switch-bar-item.fl.active(:tap="changeItem('table')") 表格形式
-      .switch-bar-item.fl(:tap="changeItem('calendar')") 日历形式
+      .switch-bar-item.fl.active(:tap="changeItem('calendar')") 日历形式
+      .switch-bar-item.fl(:tap="changeItem('table')") 表格形式
     .table-box(o-show="this.data.showBox === 'table'")
       .title-bar.clear
         .left.clear
@@ -124,17 +124,9 @@
 <script>
   module.exports = {
     data: {
-      showBox: "table"
+      showBox: "calendar"
     },
     created: function () {
-      owo.tool.touch({
-        el: this.$el,
-        end: function (e) {
-          if (e.swipe[1] < -100) {
-            owo.go('four', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
-          }
-        }
-      })
       // 计算表格的样式
       let ind = 0
       const list = owo.query('.body-bar li')
