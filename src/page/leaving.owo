@@ -1,5 +1,5 @@
 <template lang="pug">
-.leaving(o-hover="grow")
+.leaving.no-phone(o-hover="grow")
   a(href="#")
 </template>
 

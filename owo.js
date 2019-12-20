@@ -137,8 +137,12 @@ module.exports = {
       src: './src/page/three.owo'
     },
     {
-      name: 'four',
-      src: './src/page/four.owo'
+      name: 'eight',
+      src: './src/page/eight.owo'
+    },
+    {
+      name: 'seven',
+      src: './src/page/seven.owo'
     },
     {
       name: 'five',
@@ -149,12 +153,8 @@ module.exports = {
       src: './src/page/six.owo'
     },
     {
-      name: 'seven',
-      src: './src/page/seven.owo'
-    },
-    {
-      name: 'eight',
-      src: './src/page/eight.owo'
+      name: 'four',
+      src: './src/page/four.owo'
     },
     {
       name: 'leaving',
@@ -165,6 +165,10 @@ module.exports = {
       name: 'menu',
       type: "plug",
       src: './src/page/menu.owo'
+    },
+    {
+      name: 'phoneOne',
+      src: './src/page/phoneOne.owo'
     },
   ],
   // 调试模式配置

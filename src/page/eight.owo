@@ -1,32 +1,42 @@
 <template lang="pug">
 .eight
   .box
-    img.page-logo(src="@|page-logo.png|")
+    img.page-logo.no-phone(src="@|page-logo.png|")
+    img.mini-title.no-pc(src="@|title-2.png|")
     .people-box
       h2 内蒙古
+      img.no-pc.icon-dizhi(src="@|dizhi-icon.png|")
+      //- 手机上的切换按钮
+      .qiehuan-menu.no-pc(:tap="showMenu")
+        img.icon-qiehuan(src="@|icon-menu.png|")
+        span 切换城市
       .title-link
         a(href="#") 进入分专题 >>
       .people-card-box.clear
         .people-card.fl(o-hover="grow")
           a(href="#")
             img(src="@|people.png|")
-            .title 省委书记
-            .name 王卫东
+            .info
+              .title 省委书记
+              .name 王卫东
         .people-card.fl(o-hover="grow")
           a(href="#")
             img(src="@|people.png|")
-            .title 省委书记
-            .name 王卫东
+            .info
+              .title 省委书记
+              .name 王卫东
         .people-card.fl(o-hover="grow")
           a(href="#")
             img(src="@|people.png|")
-            .title 省委书记
-            .name 王卫东
+            .info
+              .title 省委书记
+              .name 王卫东
         .people-card.fl(o-hover="grow")
           a(href="#")
             img(src="@|people.png|")
-            .title 省委书记
-            .name 王卫东
+            .info
+              .title 省委书记
+              .name 王卫东
       ul.clear
         li
           a.city(href="http://www.people.com.cn/") 北京
@@ -34,64 +44,75 @@
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="http://ldzl.people.com.cn/dfzlk/image/upload/20171026_tw7cBXSYEYTI4ICuApAcb5xsgA1zMF15.jpg")
-                .title 市委书记
-                .name 蔡奇
+                .info
+                  .title 市委书记
+                  .name 蔡奇
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_zHHMpxkdnPlUh6XGLpL087X5mv4A74KK.jpg")
-                .title 市人大主任
-                .name 李伟
+                .info
+                  .title 市人大主任
+                  .name 李伟
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_srsIsUOMFmKXe5orzMrJTnnwxNgkEsHj.jpg")
-                .title 市长
-                .name 陈吉宁
+                .info
+                  .title 市长
+                  .name 陈吉宁
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_t530tc9KTi0nRAwjYPJhzpEkKZNmJnbZ.jpg")
-                .title 市政协主席
-                .name 吉林
+                .info
+                  .title 市政协主席
+                  .name 吉林
         li
           a.city 天津
           .people-card-box-edit
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="@|people.png|")
-                .title 省委书记
-                .name 王卫东2
+                .info
+                  .title 省委书记
+                  .name 王卫东2
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="@|people.png|")
-                .title 省委书记
-                .name 王卫东2
+                .info
+                  .title 省委书记
+                  .name 王卫东2
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="@|people.png|")
-                .title 省委书记
-                .name 王卫东2
+                .info
+                  .title 省委书记
+                  .name 王卫东2
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="@|people.png|")
-                .title 省委书记
-                .name 王卫东2
+                .info
+                  .title 省委书记
+                  .name 王卫东2
         li
           a.city 河北
           .people-card-box-edit
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="@|people.png|")
-                .title 省委书记
-                .name 王卫东2
+                .info
+                  .title 省委书记
+                  .name 王卫东2
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="@|people.png|")
-                .title 省委书记
-                .name 王卫东2
+                .info
+                  .title 省委书记
+                  .name 王卫东2
             .people-card.fl(o-hover="grow")
               a(href="#")
                 img(src="@|people.png|")
-                .title 省委书记
-                .name 王卫东2
+                .info
+                  .title 省委书记
+                  .name 王卫东2
         li
           a.city 山西
           .people-card-box-edit
@@ -180,6 +201,9 @@
 
 <script>
   module.exports = {
+    data: {
+      showPhoneMenu: false
+    },
     created: function () {
       // 为页面中的li添加点击事件
       const calendarList = owo.query('.people-box ul li')
@@ -215,6 +239,14 @@
       // 默认显示第一个
       if (calendarList[0]) {
         activeLi(calendarList[0])
+      }
+    },
+    showMenu: function () {
+      this.data.showPhoneMenu = !this.data.showPhoneMenu
+      if (this.data.showPhoneMenu) {
+        owo.query('.people-box ul')[0].style.display = 'block'
+      } else {
+        owo.query('.people-box ul')[0].style.display = 'none'
       }
     }
   }

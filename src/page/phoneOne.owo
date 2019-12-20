@@ -1,0 +1,84 @@
+<template lang="pug">
+.phone-one(:tap="owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')")
+  //- plug(_name="floatCloud" _src="./src/module/floatCloud.owo")
+  img.main-img(src="@|main.png|")
+  img.build(src="@|build.png|")
+  img.logo(src="@|logo.png|")
+  img.arrow(src="@|arrow.png|")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.animate('zoomIn', owo.query('.main-img')[0])
+      owo.tool.animate('fadeInUp', owo.query('.build')[0])
+      // setTimeout(() => {
+      //   isrun = false
+      // }, 3000)
+      // setTimeout(() => {
+      //   if (owo.activePage == 'one') {
+      //     owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+      //   }
+      // }, 5000)
+    }
+  }
+</script>
+
+<style lang="less">
+.one {
+  z-index: 12;
+  background-image: url('@|home-bg.jpg|');
+  background-size: auto 100%;
+  background-position: center;
+}
+.main-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10%;
+  bottom: 0;
+  margin: auto;
+  animation-duration: 1.5s;
+}
+.build {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.logo {
+  position: absolute;
+  right: -50%;
+  top: 10%;
+  left: 0;
+  margin: auto;
+}
+img {
+  user-select: none;
+  pointer-events: none;
+}
+.arrow {
+  position: absolute;
+  z-index: 10;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: fade 1000ms infinite;
+}
+@keyframes fade {
+  from {
+    opacity: 1.0;
+    bottom: 3%;
+  }
+  50% {
+    opacity: 0.4;
+    bottom: 4%;
+  }
+  to {
+    opacity: 1.0;
+    bottom: 5%;
+  }
+}
+</style>

@@ -60,6 +60,7 @@
   width: 1000px;
   height: 120px;
   position: relative;
+  font-size: 18px;
 }
 .demob {
   height: 100%;
@@ -78,7 +79,6 @@
   background-position-x: 5px;
   background-position-y: center;
   color: #222222;
-  font-size: 18px;
 }
 .demob li a {
   color: #222222;

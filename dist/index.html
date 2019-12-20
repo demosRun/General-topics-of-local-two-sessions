@@ -1,2064 +1,639 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+  <head>
+    <title>{TAG_14226_TAG}</title>
+    <!-- 页面的元信息 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="filetype" content="1"/>
+    <meta name="publishedtype" content="1"/>
+    <meta name="pagetype" content="2"/>
+    <meta name="screen-orientation" content="landscape"/>
+    <meta name="x5-orientation" content="landscape"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="browsermode" content="application"/>
+    <meta name="x5-page-mode" content="app"/>
+    
+      <!-- 页面主样式文件 -->
+      <link charset="utf-8"  rel="stylesheet" href="./static/css/owo.main.css">
+      
+    <!-- 附属css文件 -->
+    <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
+    <link rel="stylesheet" href="./static/css/swiper.4.5.0.min.css" charset="utf-8">
+      
+  </head>
+  <body>
+    <!-- 页面区域 -->
+    <!-- 页面[one]-->
+    <div class="one owo" :tap="owo.go('two', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400')" template="one" style="display: none;"><img class="main-img" src="./static/resource/main.png"><img class="build" src="./static/resource/build.png"><img class="logo" src="./static/resource/logo.png"><img class="arrow" src="./static/resource/arrow.png"></div>
+    <!-- 页面[two]-->
+    <div class="two owo" template="two" style="display: none;"><div class="box"><img class="no-phone" src="./static/resource/page-logo.png"><h1><a href="#">内蒙古第二十届人民代表大会1月31日内蒙古第二十届人民代表大会日</a></h1><div class="content-box clear"><div class="left fl"><div class="swiper-box swiper-1" template="ProgressBarSwiper"><div class="swiper-container clear"><div class="swiper-wrapper">
+<div class="swiper-slide"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div>
+<div class="swiper-slide"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div>
+<div class="swiper-slide"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div><div class="pagination clear"></div><span class="index"></span><div class="back" :tap="previou">&lt;</div><div class="forward" :tap="next">&gt;</div></div></div></div><div class="right fl"><h2><a href="#">解读2020政府工作报告释放哪些信号</a></h2><ul class="news-list" template="newsList">
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li>
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li>
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li>
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li>
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li>
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li></ul><img class="line" src="./static/resource/line.png"><h2><a href="#">解读2020政府工作报告释放哪些信号</a></h2><ul class="news-list" template="newsList">
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li>
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li>
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li>
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li>
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li>
+<li><a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a></li></ul></div></div></div></div>
+    <!-- 页面[three]-->
+    <div class="three owo" template="three" style="display: none;"><div class="box"><img class="no-phone" src="./static/resource/page-logo.png"><img class="mini-title no-pc" src="./static/resource/title-1.png"><div class="switch-bar no-phone clear"><div class="switch-bar-item fl active" :tap="changeItem('calendar')">日历形式</div><div class="switch-bar-item fl" :tap="changeItem('table')">表格形式</div></div><div class="table-box" o-show="this.data.showBox === 'table'"><div class="title-bar clear"><div class="left clear"><div class="title-bar-item" style="width:30%">省会</div><div class="title-bar-item">人大会时间</div><div class="title-bar-item">政协会时间</div></div><div class="right clear"><div class="title-bar-item line" style="width:30%">省会</div><div class="title-bar-item">人大会时间</div><div class="title-bar-item">政协会时间</div></div></div><ul class="body-bar clear">
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li>
+<li><div class="name">北京</div><div class="time-1">01.10～02.10</div><div class="time-2">01.10～02.10</div></li></ul><div class="no-pc show-more" :tap="showMore()">显示全部▾</div></div><div class="calendar-box no-phone" o-show="this.data.showBox === 'calendar'"><h2>内蒙古</h2><div class="title-link"><a href="#">进入分专题 &gt;&gt;</a></div><img class="show-img"><ul class="clear"><li><a href="http://www.people.com.cn/">北京</a><img src="./static/resource/test.png"></li><li><a>天津</a><img src="./static/resource/test.png"></li><li><a>河北</a><img src="./static/resource/test.png"></li><li><a>山西</a><img src="./static/resource/test.png"></li><li><a>内蒙古</a><img src="./static/resource/test.png"></li><li><a>辽宁</a><img src="./static/resource/test.png"></li><li><a>吉林</a><img src="./static/resource/test.png"></li><li><a>黑龙江</a><img src="./static/resource/test.png"></li><li><a>上海</a><img src="./static/resource/test.png"></li><li><a>江苏</a><img src="./static/resource/test.png"></li><li><a>浙江</a><img src="./static/resource/test.png"></li><li><a>安徽</a><img src="./static/resource/test.png"></li><li><a>福建</a></li><li><a>江西</a><img src="./static/resource/test.png"></li><li><a>山东</a><img src="./static/resource/test.png"></li><li><a>河南</a><img src="./static/resource/test.png"></li><li><a>湖北</a><img src="./static/resource/test.png"></li><li><a>湖南</a><img src="./static/resource/test.png"></li><li><a>广东</a><img src="./static/resource/test.png"></li><li><a>广西</a><img src="./static/resource/test.png"></li><li><a>海南</a><img src="./static/resource/test.png"></li><li><a>重庆</a><img src="./static/resource/test.png"></li><li><a>四川</a><img src="./static/resource/test.png"></li><li><a>贵州</a><img src="./static/resource/test.png"></li><li><a>云南</a><img src="./static/resource/test.png"></li><li><a>西藏</a><img src="./static/resource/test.png"></li><li><a>陕西</a><img src="./static/resource/test.png"></li><li><a>甘肃</a><img src="./static/resource/test.png"></li><li><a>青海</a><img src="./static/resource/test.png"></li><li><a>宁夏</a><img src="./static/resource/test.png"></li><li><a>新疆</a><img src="./static/resource/test.png"></li></ul></div></div></div>
+    <!-- 页面[eight]-->
+    <div class="eight owo" template="eight" style="display: none;"><div class="box"><img class="page-logo no-phone" src="./static/resource/page-logo.png"><img class="mini-title no-pc" src="./static/resource/title-2.png"><div class="people-box"><h2>内蒙古</h2><img class="no-pc icon-dizhi" src="./static/resource/dizhi-icon.png"><div class="qiehuan-menu no-pc" :tap="showMenu"><img class="icon-qiehuan" src="./static/resource/icon-menu.png"><span>切换城市</span></div><div class="title-link"><a href="#">进入分专题 &gt;&gt;</a></div><div class="people-card-box clear"><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东</div></div></a></div></div><ul class="clear"><li><a class="city" href="http://www.people.com.cn/">北京</a><div class="people-card-box-edit"><div class="people-card fl owo-hover-grow"><a href="#"><img src="http://ldzl.people.com.cn/dfzlk/image/upload/20171026_tw7cBXSYEYTI4ICuApAcb5xsgA1zMF15.jpg"><div class="info"><div class="title">市委书记</div><div class="name">蔡奇</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_zHHMpxkdnPlUh6XGLpL087X5mv4A74KK.jpg"><div class="info"><div class="title">市人大主任</div><div class="name">李伟</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_srsIsUOMFmKXe5orzMrJTnnwxNgkEsHj.jpg"><div class="info"><div class="title">市长</div><div class="name">陈吉宁</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_t530tc9KTi0nRAwjYPJhzpEkKZNmJnbZ.jpg"><div class="info"><div class="title">市政协主席</div><div class="name">吉林</div></div></a></div></div></li><li><a class="city">天津</a><div class="people-card-box-edit"><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东2</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东2</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东2</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东2</div></div></a></div></div></li><li><a class="city">河北</a><div class="people-card-box-edit"><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东2</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东2</div></div></a></div><div class="people-card fl owo-hover-grow"><a href="#"><img src="./static/resource/people.png"><div class="info"><div class="title">省委书记</div><div class="name">王卫东2</div></div></a></div></div></li><li><a class="city">山西</a><div class="people-card-box-edit"></div></li><li><a class="city">内蒙古</a><div class="people-card-box-edit"></div></li><li><a class="city">辽宁</a><div class="people-card-box-edit"></div></li><li><a class="city">吉林</a><div class="people-card-box-edit"></div></li><li><a class="city">黑龙江</a><div class="people-card-box-edit"></div></li><li><a class="city">上海</a><div class="people-card-box-edit"></div></li><li><a class="city">江苏</a><div class="people-card-box-edit"></div></li><li><a class="city">浙江</a><div class="people-card-box-edit"></div></li><li><a class="city">安徽</a><div class="people-card-box-edit"></div></li><li><a class="city">福建</a><div class="people-card-box-edit"></div></li><li><a class="city">江西</a><div class="people-card-box-edit"></div></li><li><a class="city">山东</a><div class="people-card-box-edit"></div></li><li><a class="city">河南</a><div class="people-card-box-edit"></div></li><li><a class="city">湖北</a><div class="people-card-box-edit"></div></li><li><a class="city">湖南</a><div class="people-card-box-edit"></div></li><li><a class="city">广东</a><div class="people-card-box-edit"></div></li><li><a class="city">广西</a><div class="people-card-box-edit"></div></li><li><a class="city">海南</a><div class="people-card-box-edit"></div></li><li><a class="city">重庆</a><div class="people-card-box-edit"></div></li><li><a class="city">四川</a><div class="people-card-box-edit"></div></li><li><a class="city">贵州</a><div class="people-card-box-edit"></div></li><li><a class="city">云南</a><div class="people-card-box-edit"></div></li><li><a class="city">西藏</a><div class="people-card-box-edit"></div></li><li><a class="city">陕西</a><div class="people-card-box-edit"></div></li><li><a class="city">甘肃</a><div class="people-card-box-edit"></div></li><li><a class="city">青海</a><div class="people-card-box-edit"></div></li><li><a class="city">宁夏</a><div class="people-card-box-edit"></div></li><li><a class="city">新疆</a><div class="people-card-box-edit"></div></li></ul></div></div></div>
+    <!-- 页面[seven]-->
+    <div class="seven owo" template="seven" style="display: none;"><div class="box"><img class="page-logo no-phone" src="./static/resource/page-logo.png"><img class="mini-title no-pc" src="./static/resource/title-3.png"><div class="bookshelf-box"><div class="book-swiper-box-9" template="cardSwiper3"><div class="swiper-container clear"><div class="swiper-wrapper"><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-2 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div><div class="swiper-slide"><div class="book-box"><div class="book-1 book owo-hover-float"><a href="#"><div class="time">2019</div><div class="city">上海</div><div class="name">政府工作报告</div></a></div></div></div></div></div><div class="swiper-pagination no-phone"></div></div></div></div></div>
+    <!-- 页面[five]-->
+    <div class="five owo" template="five" style="display: none;"><div class="box"><img class="page-logo no-phone" src="./static/resource/page-logo.png"><img class="mini-title no-pc" src="./static/resource/title-4.png"><div class="tab-bar clear"><div class="tab-bar-item active" :tap="changepage"><div class="text">第一页</div><div class="swiper-wrapper">
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div></div></div><div class="tab-bar-item" :tap="changepage"><div class="text">第二页</div><div class="swiper-wrapper">
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">第二页内容</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div></div></div><div class="tab-bar-item" :tap="changepage"><div class="text">第三页</div></div><div class="tab-bar-item" :tap="changepage"><div class="text">第四页</div></div><div class="tab-bar-item" :tap="changepage"><div class="text">第五页</div></div><div class="tab-bar-item" :tap="changepage"><div class="text">第六页</div></div></div><div class="card-swiper-box-9" template="cardSwiper2"><div class="swiper-container clear"><div class="swiper-wrapper"></div></div><div class="tool-bar no-phone"><img class="back owo-hover-grow" src="./static/resource/back-2.png" :tap="previou"><img class="forward owo-hover-grow" src="./static/resource/forward-2.png" :tap="next"></div></div></div></div>
+    <!-- 页面[six]-->
+    <div class="six owo" template="six" style="display: none;"><div class="box"><img class="page-logo no-phone" src="./static/resource/page-logo.png"><img class="mini-title no-pc" src="./static/resource/title-5.png"><div class="marking-box"><img class="qr-image" src="./static/resource/qr.png"><div class="rolling-news" template="rollNews"> 
+  <div class="demob clear" id="demob"> 
+  <div class="clear" id="demo1b"> 
+    <ul class="news-list-edit">
+    <li><a href="NewsView.shtml?id=33645430" target="_blank">我国首台出口南美洲敞开式岩石隧道掘进机长沙下线</a></li> 
+    <li><a href="NewsView.shtml?id=33645182" target="_blank">杜家毫：坚持守正创新 主动履职尽责 推动湖南省精神文明建设和文艺创作生产再上新台阶</a></li> 
+    <li><a href="NewsView.shtml?id=33645132" target="_blank">湖南湿冷“魔法攻击”正式上线</a></li> 
+    <li><a href="NewsView.shtml?id=33645115" target="_blank">共商妇女发展大计 书写更美好的时代新篇章</a></li> 
+    <li><a href="NewsView.shtml?id=33645102" target="_blank">“房住不炒”，给长沙带来什么</a></li> 
+    <li><a href="NewsView.shtml?id=33645076" target="_blank">湖南省第十三次妇女代表大会闭幕 姜欣当选省妇联主席</a></li> 
+    <li><a href="NewsView.shtml?id=33645074" target="_blank">生态画卷入目来</a></li> 
+    <li><a href="NewsView.shtml?id=33645073" target="_blank">湖南省社科联八届二次常委会召开 张宏森当选省社科联主席</a></li> 
+    <li><a href="NewsView.shtml?id=33645054" target="_blank">地铁3、5号线月底试运行</a></li> 
+    <li><a href="NewsView.shtml?id=33645011" target="_blank">增长50%，湖南进出口增速全国第一</a></li> 
+    <li><a href="NewsView.shtml?id=33645005" target="_blank">湖南省政府就《政府工作报告》征求各界人士意见</a></li> 
+    <li><a href="NewsView.shtml?id=33645004" target="_blank">乌兰：牢记育人初心使命 创建一流农业大学</a></li> 
+    <li><a href="NewsView.shtml?id=33645002" target="_blank">全面推进电力能源领域战略合作 更好服务和保障湖南高质量发展</a></li> 
+    <li><a href="NewsView.shtml?id=33644964" target="_blank">考研冲刺进行时</a></li> 
+    <li><a href="NewsView.shtml?id=33644805" target="_blank">湖南扩大装配式建筑实施范围</a></li> 
+    <li><a href="NewsView.shtml?id=33643366" target="_blank">湖南“操场埋尸案”一审宣判 主犯杜少平被判死刑</a></li> 
+    <li><a href="NewsView.shtml?id=33642227" target="_blank">长沙拟新增69条历史街巷</a></li> 
+    <li><a href="NewsView.shtml?id=33641682" target="_blank">36亿中央财政专项扶贫资金下达湖南</a></li> 
+    <li><a href="NewsView.shtml?id=33641675" target="_blank">长沙年内试点交通事故赔偿“城乡同命同价”</a></li> 
+    <li><a href="NewsView.shtml?id=33641658" target="_blank">寒潮入湘 雨雪天气影响湘北</a></li> 
+    </ul> 
+  </div> 
+  <div class="clear" id="demo2b"> 
+  </div> 
+  </div> 
+</div></div></div></div>
+    <!-- 页面[four]-->
+    <div class="four owo" template="four" style="display: none;"><div class="box"><img class="page-logo no-phone" src="./static/resource/page-logo.png"><div class="card-swiper-box" template="cardSwiper"><div class="swiper-container clear"><div class="swiper-wrapper">
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div>
+<div class="swiper-slide owo-hover-grow"><div class="swiper-slide-box"><img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395"><div class="text">全省“法治进校园”巡讲团首站——晋中</div></div></div></div></div><div class="tool-bar no-phone"><img class="forward owo-hover-grow" src="./static/resource/forward-2.png" :tap="next"><img class="back owo-hover-grow" src="./static/resource/back-2.png" :tap="previou"></div><div class="index-box"></div></div></div></div>
+    <!-- 页面[leaving]-->
+    <div class="leaving no-phone owo-hover-grow owo-plug"><a href="#"></a></div>
+    <!-- 页面[menu]-->
+    <ul class="menu no-phone owo-plug" template="menu"><li class="to-one" :tap="goPage('one')">封面</li><li class="to-two active" :tap="goPage('two')">两会要闻</li><li class="to-three" :tap="goPage('three')">会期查询</li><li class="to-eight" :tap="goPage('eight')">领导人资料</li><li class="to-seven" :tap="goPage('seven')">政府工作报告</li><li class="to-five" :tap="goPage('five')">两会访谈</li><li class="to-six" :tap="goPage('six')">交卷时刻</li><li class="to-four" :tap="goPage('four')">高清组图</li></ul>
+    <!-- 页面[phoneOne]-->
+    <div class="phone-one owo" :tap="owo.go('two', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400')" template="phoneOne" style="display: none;"><img class="main-img" src="./static/resource/main.png"><img class="build" src="./static/resource/build.png"><img class="logo" src="./static/resource/logo.png"><img class="arrow" src="./static/resource/arrow.png"></div>
+    
 
-<head>
-  <title>{TAG_14226_TAG}</title>
-  <!-- 页面的元信息 -->
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no, email=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-  <meta name="renderer" content="webkit" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="filetype" content="1" />
-  <meta name="publishedtype" content="1" />
-  <meta name="pagetype" content="2" />
-  <meta name="screen-orientation" content="landscape" />
-  <meta name="x5-orientation" content="landscape" />
-  <meta name="full-screen" content="yes" />
-  <meta name="x5-fullscreen" content="true" />
-  <meta name="browsermode" content="application" />
-  <meta name="x5-page-mode" content="app" />
-
-  <!-- 页面主样式文件 -->
-  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.main.6xgnatknjr.css">
-
-  <!-- 附属css文件 -->
-  <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
-  <link rel="stylesheet" href="./static/css/swiper.4.5.0.min.css" charset="utf-8">
-
-</head>
-
-<body>
-  <!-- 页面区域 -->
-  <!-- 页面[one]-->
-  <div class="one owo" :tap="owo.go('two', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400')" template="one" style="display: none;">
-    <img class="main-img" src="./static/resource/main.png">
-    <img class="build" src="./static/resource/build.png">
-    <img class="logo" src="./static/resource/logo.png">
-    <img class="arrow" src="./static/resource/arrow.png">
-  </div>
-  <!-- 页面[two]-->
-  <div class="two owo" template="two" style="display: none;">
-    <div class="box">
-      <img src="./static/resource/page-logo.png">
-      <h1>
-        <a href="#">内蒙古第二十届人民代表大会1月31日内蒙古第二十届人民代表大会日</a>
-      </h1>
-      <div class="content-box clear">
-        <div class="left fl">
-          <div class="swiper-box swiper-1" template="ProgressBarSwiper">
-            <div class="swiper-container clear">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                  <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                  <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                  <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-                </div>
-              </div>
-              <div class="pagination clear"></div>
-              <span class="index"></span>
-              <div class="back" :tap="previou">&lt;</div>
-              <div class="forward" :tap="next">&gt;</div>
-            </div>
-          </div>
-        </div>
-        <div class="right fl">
-          <h2>
-            <a href="#">解读2020政府工作报告释放哪些信号</a>
-          </h2>
-          <ul class="news-list" template="newsList">
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-          </ul>
-          <img class="line" src="./static/resource/line.png">
-          <h2>
-            <a href="#">解读2020政府工作报告释放哪些信号</a>
-          </h2>
-          <ul class="news-list" template="newsList">
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">告释放哪些“十三五”发展信十三五”发展信号的解</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- 页面[three]-->
-  <div class="three owo" template="three" style="display: none;">
-    <div class="box">
-      <img src="./static/resource/page-logo.png">
-      <div class="switch-bar clear">
-        <div class="switch-bar-item fl active" :tap="changeItem('calendar')">日历形式</div>
-        <div class="switch-bar-item fl" :tap="changeItem('table')">表格形式</div>
-      </div>
-      <div class="table-box" o-show="this.data.showBox === 'table'">
-        <div class="title-bar clear">
-          <div class="left clear">
-            <div class="title-bar-item">省会</div>
-            <div class="title-bar-item">人大会时间</div>
-            <div class="title-bar-item">政协会时间</div>
-          </div>
-          <div class="right clear">
-            <div class="title-bar-item line">省会</div>
-            <div class="title-bar-item">人大会时间</div>
-            <div class="title-bar-item">政协会时间</div>
-          </div>
-        </div>
-        <ul class="body-bar clear">
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-          <li>
-            <div class="name">北京</div>
-            <div class="time-1">01.10～02.10</div>
-            <div class="time-2">01.10～02.10</div>
-          </li>
-        </ul>
-      </div>
-      <div class="calendar-box" o-show="this.data.showBox === 'calendar'">
-        <h2>内蒙古</h2>
-        <div class="title-link">
-          <a href="#">进入分专题 &gt;&gt;</a>
-        </div>
-        <img class="show-img">
-        <ul class="clear">
-          <li>
-            <a href="http://www.people.com.cn/">北京</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>天津</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>河北</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>山西</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>内蒙古</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>辽宁</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>吉林</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>黑龙江</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>上海</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>江苏</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>浙江</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>安徽</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>福建</a>
-          </li>
-          <li>
-            <a>江西</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>山东</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>河南</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>湖北</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>湖南</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>广东</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>广西</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>海南</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>重庆</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>四川</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>贵州</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>云南</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>西藏</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>陕西</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>甘肃</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>青海</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>宁夏</a>
-            <img src="./static/resource/test.png">
-          </li>
-          <li>
-            <a>新疆</a>
-            <img src="./static/resource/test.png">
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!-- 页面[four]-->
-  <div class="four owo" template="four" style="display: none;">
-    <div class="box">
-      <img class="page-logo" src="./static/resource/page-logo.png">
-      <div class="card-swiper-box" template="cardSwiper">
-        <div class="swiper-container clear">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tool-bar">
-          <img class="forward owo-hover-grow" src="./static/resource/forward-2.png" :tap="next">
-          <img class="back owo-hover-grow" src="./static/resource/back-2.png" :tap="previou">
-        </div>
-        <div class="index-box"></div>
-      </div>
-    </div>
-  </div>
-  <!-- 页面[five]-->
-  <div class="five owo" template="five" style="display: none;">
-    <div class="box">
-      <img class="page-logo" src="./static/resource/page-logo.png">
-      <div class="card-swiper-box-9" template="cardSwiper2">
-        <div class="swiper-container clear">
-          <div class="swiper-wrapper"></div>
-        </div>
-        <div class="tool-bar">
-          <img class="back owo-hover-grow" src="./static/resource/back-2.png" :tap="previou">
-          <img class="forward owo-hover-grow" src="./static/resource/forward-2.png" :tap="next">
-        </div>
-      </div>
-      <div class="tab-bar clear">
-        <div class="tab-bar-item active" :tap="changepage">
-          <div class="text">第一页</div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-bar-item" :tap="changepage">
-          <div class="text">第二页</div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181255181321992447490.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">第二页内容</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011409383792014803.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-            <div class="swiper-slide owo-hover-grow">
-              <div class="swiper-slide-box">
-                <img src="http://www.people.com.cn/NMediaFile/2019/0618/MAIN201906181011411060153107563.jpg" width="525" height="395">
-                <div class="text">全省“法治进校园”巡讲团首站——晋中</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-bar-item" :tap="changepage">
-          <div class="text">第三页</div>
-        </div>
-        <div class="tab-bar-item" :tap="changepage">
-          <div class="text">第四页</div>
-        </div>
-        <div class="tab-bar-item" :tap="changepage">
-          <div class="text">第五页</div>
-        </div>
-        <div class="tab-bar-item" :tap="changepage">
-          <div class="text">第六页</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- 页面[six]-->
-  <div class="six owo" template="six" style="display: none;">
-    <div class="box">
-      <img class="page-logo" src="./static/resource/page-logo.png">
-      <div class="marking-box">
-        <img class="qr-image" src="./static/resource/qr.png">
-        <div class="rolling-news" template="rollNews">
-          <div class="demob clear" id="demob">
-            <div class="clear" id="demo1b">
-              <ul class="news-list-edit">
-                <li>
-                  <a href="NewsView.shtml?id=33645430" target="_blank">我国首台出口南美洲敞开式岩石隧道掘进机长沙下线</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645182" target="_blank">杜家毫：坚持守正创新 主动履职尽责 推动湖南省精神文明建设和文艺创作生产再上新台阶</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645132" target="_blank">湖南湿冷“魔法攻击”正式上线</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645115" target="_blank">共商妇女发展大计 书写更美好的时代新篇章</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645102" target="_blank">“房住不炒”，给长沙带来什么</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645076" target="_blank">湖南省第十三次妇女代表大会闭幕 姜欣当选省妇联主席</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645074" target="_blank">生态画卷入目来</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645073" target="_blank">湖南省社科联八届二次常委会召开 张宏森当选省社科联主席</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645054" target="_blank">地铁3、5号线月底试运行</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645011" target="_blank">增长50%，湖南进出口增速全国第一</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645005" target="_blank">湖南省政府就《政府工作报告》征求各界人士意见</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645004" target="_blank">乌兰：牢记育人初心使命 创建一流农业大学</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33645002" target="_blank">全面推进电力能源领域战略合作 更好服务和保障湖南高质量发展</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33644964" target="_blank">考研冲刺进行时</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33644805" target="_blank">湖南扩大装配式建筑实施范围</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33643366" target="_blank">湖南“操场埋尸案”一审宣判 主犯杜少平被判死刑</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33642227" target="_blank">长沙拟新增69条历史街巷</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33641682" target="_blank">36亿中央财政专项扶贫资金下达湖南</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33641675" target="_blank">长沙年内试点交通事故赔偿“城乡同命同价”</a>
-                </li>
-                <li>
-                  <a href="NewsView.shtml?id=33641658" target="_blank">寒潮入湘 雨雪天气影响湘北</a>
-                </li>
-              </ul>
-            </div>
-            <div class="clear" id="demo2b">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- 页面[seven]-->
-  <div class="seven owo" template="seven" style="display: none;">
-    <div class="box">
-      <img class="page-logo" src="./static/resource/page-logo.png">
-      <div class="bookshelf-box">
-        <div class="book-swiper-box-9" template="cardSwiper3">
-          <div class="swiper-container clear">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-2 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="book-box">
-                  <div class="book-1 book owo-hover-float">
-                    <a href="#">
-                      <div class="time">2019</div>
-                      <div class="city">上海</div>
-                      <div class="name">政府工作报告</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- 页面[eight]-->
-  <div class="eight owo" template="eight" style="display: none;">
-    <div class="box">
-      <img class="page-logo" src="./static/resource/page-logo.png">
-      <div class="people-box">
-        <h2>内蒙古</h2>
-        <div class="title-link">
-          <a href="#">进入分专题 &gt;&gt;</a>
-        </div>
-        <div class="people-card-box clear">
-          <div class="people-card fl owo-hover-grow">
-            <a href="#">
-              <img src="./static/resource/people.png">
-              <div class="title">省委书记</div>
-              <div class="name">王卫东</div>
-            </a>
-          </div>
-          <div class="people-card fl owo-hover-grow">
-            <a href="#">
-              <img src="./static/resource/people.png">
-              <div class="title">省委书记</div>
-              <div class="name">王卫东</div>
-            </a>
-          </div>
-          <div class="people-card fl owo-hover-grow">
-            <a href="#">
-              <img src="./static/resource/people.png">
-              <div class="title">省委书记</div>
-              <div class="name">王卫东</div>
-            </a>
-          </div>
-          <div class="people-card fl owo-hover-grow">
-            <a href="#">
-              <img src="./static/resource/people.png">
-              <div class="title">省委书记</div>
-              <div class="name">王卫东</div>
-            </a>
-          </div>
-        </div>
-        <ul class="clear">
-          <li>
-            <a class="city" href="http://www.people.com.cn/">北京</a>
-            <div class="people-card-box-edit">
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="http://ldzl.people.com.cn/dfzlk/image/upload/20171026_tw7cBXSYEYTI4ICuApAcb5xsgA1zMF15.jpg">
-                  <div class="title">市委书记</div>
-                  <div class="name">蔡奇</div>
-                </a>
-              </div>
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_zHHMpxkdnPlUh6XGLpL087X5mv4A74KK.jpg">
-                  <div class="title">市人大主任</div>
-                  <div class="name">李伟</div>
-                </a>
-              </div>
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_srsIsUOMFmKXe5orzMrJTnnwxNgkEsHj.jpg">
-                  <div class="title">市长</div>
-                  <div class="name">陈吉宁</div>
-                </a>
-              </div>
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="http://ldzl.people.com.cn/dfzlk/image/upload/20180201_t530tc9KTi0nRAwjYPJhzpEkKZNmJnbZ.jpg">
-                  <div class="title">市政协主席</div>
-                  <div class="name">吉林</div>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <a class="city">天津</a>
-            <div class="people-card-box-edit">
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="./static/resource/people.png">
-                  <div class="title">省委书记</div>
-                  <div class="name">王卫东2</div>
-                </a>
-              </div>
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="./static/resource/people.png">
-                  <div class="title">省委书记</div>
-                  <div class="name">王卫东2</div>
-                </a>
-              </div>
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="./static/resource/people.png">
-                  <div class="title">省委书记</div>
-                  <div class="name">王卫东2</div>
-                </a>
-              </div>
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="./static/resource/people.png">
-                  <div class="title">省委书记</div>
-                  <div class="name">王卫东2</div>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <a class="city">河北</a>
-            <div class="people-card-box-edit">
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="./static/resource/people.png">
-                  <div class="title">省委书记</div>
-                  <div class="name">王卫东2</div>
-                </a>
-              </div>
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="./static/resource/people.png">
-                  <div class="title">省委书记</div>
-                  <div class="name">王卫东2</div>
-                </a>
-              </div>
-              <div class="people-card fl owo-hover-grow">
-                <a href="#">
-                  <img src="./static/resource/people.png">
-                  <div class="title">省委书记</div>
-                  <div class="name">王卫东2</div>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <a class="city">山西</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">内蒙古</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">辽宁</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">吉林</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">黑龙江</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">上海</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">江苏</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">浙江</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">安徽</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">福建</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">江西</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">山东</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">河南</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">湖北</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">湖南</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">广东</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">广西</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">海南</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">重庆</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">四川</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">贵州</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">云南</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">西藏</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">陕西</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">甘肃</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">青海</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">宁夏</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-          <li>
-            <a class="city">新疆</a>
-            <div class="people-card-box-edit"></div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!-- 页面[leaving]-->
-  <div class="leaving owo-hover-grow owo-plug">
-    <a href="#"></a>
-  </div>
-  <!-- 页面[menu]-->
-  <ul class="menu owo-plug" template="menu">
-    <li class="to-one" :tap="goPage('one')">封面</li>
-    <li class="to-two active" :tap="goPage('two')">两会要闻</li>
-    <li class="to-three" :tap="goPage('three')">会期查询</li>
-    <li class="to-eight" :tap="goPage('eight')">领导人资料</li>
-    <li class="to-seven" :tap="goPage('seven')">政府工作报告</li>
-    <li class="to-five" :tap="goPage('five')">两会访谈</li>
-    <li class="to-six" :tap="goPage('six')">交卷时刻</li>
-    <li class="to-four" :tap="goPage('four')">高清组图</li>
-  </ul>
-
-
-  <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
-  <script src="./static/js/swiper.4.5.0.min.js" type="text/javascript" charset="UTF-8"></script>
-  <script src="./static/js/ThreeWebGL.js" type="text/javascript" charset="UTF-8"></script>
-  <script src="./static/js/ThreeExtras.js" type="text/javascript" charset="UTF-8"></script>
-  <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script><!-- 框架script代码 -->
-  <!-- 框架script文件 -->
-  <script src="./static/js/owo.main.6xgnatknjr.js" type="text/javascript" charset="UTF-8"></script>
-  <script>
-    /*
+    <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript"  charset="UTF-8"></script>
+    <script src="./static/js/swiper.4.5.0.min.js" type="text/javascript"  charset="UTF-8"></script>
+    <script src="./static/js/ThreeWebGL.js" type="text/javascript"  charset="UTF-8"></script>
+    <script src="./static/js/ThreeExtras.js" type="text/javascript"  charset="UTF-8"></script>
+    <script src="./static/js/main.js" type="text/javascript"  charset="UTF-8"></script><!-- 框架script代码 --><!-- 框架script文件 -->
+<script src="./static/js/owo.main.js" type="text/javascript" charset="UTF-8"></script>
+<script>/*
   存储每个页面的函数
   键名：页面名称
   键值：方法列表
 */
-    owo.phoneEnter = "null";
-    owo.script = {
-      "one": {
-        "created": function created() {
-          owo.tool.animate('zoomIn', owo.query('.main-img')[0]);
-          owo.tool.animate('fadeInUp', owo.query('.build')[0]); // setTimeout(() => {
-          //   isrun = false
-          // }, 3000)
-          // setTimeout(() => {
-          //   if (owo.activePage == 'one') {
-          //     owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
-          //   }
-          // }, 5000)
-        }
-      },
-      "two": {
-        "created": function created() {
-          owo.tool.each(document.querySelectorAll('.menu li'), function(item) {
-            item.classList.remove('active');
-          });
-          var link = document.querySelectorAll('.menu .to-two')[0];
+owo.phoneEnter = "null";
+owo.script = {
+  "one": {
+    "created": function created() {
+      owo.tool.animate('zoomIn', owo.query('.main-img')[0]);
+      owo.tool.animate('fadeInUp', owo.query('.build')[0]); // setTimeout(() => {
+      //   isrun = false
+      // }, 3000)
+      // setTimeout(() => {
+      //   if (owo.activePage == 'one') {
+      //     owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+      //   }
+      // }, 5000)
+    }
+  },
+  "two": {
+    "created": function created() {
+      owo.tool.each(document.querySelectorAll('.menu li'), function (item) {
+        item.classList.remove('active');
+      });
+      var link = document.querySelectorAll('.menu .to-two')[0];
 
-          if (link) {
-            link.classList.add('active');
-          }
-        },
-        "template": {
-          "ProgressBarSwiper": {
-            "data": {
-              "swiper": null
-            },
-            "created": function created() {
-              var _this = this;
-
-              var slideListLength = owo.query('.swiper-1 .swiper-wrapper .swiper-slide').length;
-              owo.query('.swiper-1 .index')[0].innerText = '1/' + slideListLength; // 轮播图展示区域swiper
-
-              setTimeout(function() {
-                _this.data.swiper = new Swiper(owo.query('.swiper-1 .swiper-container')[0], {
-                  pagination: {
-                    el: owo.query('.swiper-1 .pagination')[0],
-                    type: 'progressbar'
-                  },
-                  loop: true,
-                  autoplay: 3000,
-                  paginationClickable: true,
-                  on: {
-                    slideChange: function slideChange() {
-                      if (owo.query('.swiper-1 .index')[0]) {
-                        var index = null;
-                        console.log(_this.data.swiper);
-                        if (!_this.data.swiper) return;
-                        if (_this.data.swiper.activeIndex <= slideListLength) index = _this.data.swiper.activeIndex;
-                        else index = 1;
-                        owo.query('.swiper-1 .index')[0].innerText = index + '/' + slideListLength;
-                      }
-                    }
-                  }
-                });
-                setTimeout(function() {
-                  var switchList = owo.query('.swiper-1 .pagination .swiper-pagination-switch');
-
-                  for (var ind = 0; ind < switchList.length; ind++) {
-                    switchList[ind].style.width = 100 / slideListLength + '%';
-                  }
-                }, 100);
-              }, 0);
-            },
-            "previou": function previou() {
-              this.data.swiper.swipePrev();
-            },
-            "next": function next() {
-              this.data.swiper.swipeNext();
-            }
-          },
-          "newsList": {
-            "created": function created() {
-              owo.tool.touch({
-                el: this.$el,
-                end: function end(e) {
-                  if (e.swipe[1] < -100) {
-                    owo.go('seven', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400');
-                  }
-                }
-              });
-            }
-          },
-          "newsList-1": {
-            "created": function created() {
-              owo.tool.touch({
-                el: this.$el,
-                end: function end(e) {
-                  if (e.swipe[1] < -100) {
-                    owo.go('seven', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400');
-                  }
-                }
-              });
-            }
-          }
-        }
-      },
-      "three": {
+      if (link) {
+        link.classList.add('active');
+      }
+    },
+    "template": {
+      "ProgressBarSwiper": {
         "data": {
-          "showBox": "calendar"
+          "swiper": null
         },
         "created": function created() {
-          // 计算表格的样式
-          var ind = 0;
-          var list = owo.query('.body-bar li');
+          var _this = this;
 
-          for (var key in list) {
-            if (list.hasOwnProperty(key)) {
-              var element = list[key];
-            }
-          } // 为页面中的li添加点击事件
+          if (!owo.query('.swiper-1 .index')[0]) return;
+          var slideListLength = owo.query('.swiper-1 .swiper-wrapper .swiper-slide').length;
+          owo.query('.swiper-1 .index')[0].innerText = '1/' + slideListLength; // 轮播图展示区域swiper
 
-
-          var calendarList = owo.query('.calendar-box ul li');
-
-          function clearLiActive() {
-            for (var _key in calendarList) {
-              if (calendarList.hasOwnProperty(_key)) {
-                var _element = calendarList[_key];
-
-                _element.classList.remove('active');
-              }
-            }
-          } // 点击地区li事件
-
-
-          function activeLi(target) {
-            // 清除所有li的活跃样式
-            clearLiActive();
-            target.classList.add('active');
-            owo.query('.calendar-box h2')[0].innerHTML = target.getElementsByTagName('a')[0].innerHTML;
-
-            if (owo.query('.calendar-box .title-link a')[0]) {
-              owo.query('.calendar-box .title-link a')[0].href = target.getElementsByTagName('a')[0].href;
-              owo.query('.calendar-box .show-img')[0].src = target.getElementsByTagName('img')[0].src;
-            }
-          }
-
-          for (var _key2 in calendarList) {
-            if (calendarList.hasOwnProperty(_key2)) {
-              var _element2 = calendarList[_key2];
-
-              _element2.onclick = function(e) {
-                activeLi(e.target);
-              };
-            }
-          } // 默认显示第一个
-
-
-          activeLi(calendarList[0]);
-        },
-        "changeItem": function changeItem(name) {
-          owo.tool.change(this, 'showBox', name);
-          var switchList = owo.query('.switch-bar-item');
-
-          for (var key in switchList) {
-            if (switchList.hasOwnProperty(key)) {
-              var element = switchList[key];
-              element.classList.remove('active');
-            }
-          }
-
-          this.$target.classList.add('active');
-        }
-      },
-      "four": {
-        "template": {
-          "cardSwiper": {
-            "data": {
-              "swiper": null
-            },
-            "created": function created() {
-              var _this2 = this;
-
-              // 轮播图展示区域swiper
-              setTimeout(function() {
-                _this2.data.swiper = new Swiper(_this2.$el.getElementsByClassName('swiper-container')[0], {
-                  slidesPerView: 2,
-                  slidesPerGroup: 2,
-                  slidesPerColumn: 2,
-                  on: {
-                    slideChange: function slideChange() {
-                      _this2.$el.getElementsByClassName('index-box')[0].innerText = Math.ceil(_this2.data.swiper.activeIndex / 2) + 1 + "/" + Math.ceil(_this2.data.swiper.slides.length / 4);
-                    }
+          setTimeout(function () {
+            _this.data.swiper = new Swiper(owo.query('.swiper-1 .swiper-container')[0], {
+              pagination: {
+                el: owo.query('.swiper-1 .pagination')[0],
+                type: 'progressbar'
+              },
+              loop: true,
+              autoplay: 3000,
+              paginationClickable: true,
+              on: {
+                slideChange: function slideChange() {
+                  if (owo.query('.swiper-1 .index')[0]) {
+                    var index = null;
+                    console.log(_this.data.swiper);
+                    if (!_this.data.swiper) return;
+                    if (_this.data.swiper.activeIndex <= slideListLength) index = _this.data.swiper.activeIndex;else index = 1;
+                    owo.query('.swiper-1 .index')[0].innerText = index + '/' + slideListLength;
                   }
-                }); // 生成页码
+                }
+              }
+            });
+            setTimeout(function () {
+              var switchList = owo.query('.swiper-1 .pagination .swiper-pagination-switch');
 
-                _this2.$el.getElementsByClassName('index-box')[0].innerText = Math.ceil(_this2.data.swiper.activeIndex / 2) + 1 + "/" + Math.ceil(_this2.data.swiper.slides.length / 4);
-              }, 0);
-            },
-            "previou": function previou() {
-              this.data.swiper.slidePrev();
-            },
-            "next": function next() {
-              this.data.swiper.slideNext();
-            }
-          }
-        }
-      },
-      "five": {
-        "created": function created() {
-          var _this3 = this;
-
-          setTimeout(function() {
-            if (owo.query('.tab-bar-item')[0]) {
-              _this3.changepage(owo.query('.tab-bar-item')[0]);
-            }
+              for (var ind = 0; ind < switchList.length; ind++) {
+                switchList[ind].style.width = 100 / slideListLength + '%';
+              }
+            }, 100);
           }, 0);
         },
-        "changepage": function changepage(item) {
-          var target = item ? item : this.$target;
-          var swiperBox = target.getElementsByClassName('swiper-wrapper')[0];
-
-          if (swiperBox) {
-            var showSwiper = owo.query('.card-swiper-box-9 .swiper-wrapper')[0];
-
-            if (showSwiper) {
-              showSwiper.innerHTML = swiperBox.innerHTML;
-              owo.script.five.template.cardSwiper2.data.swiper.updateSlides(); // 给当前标签设置活跃样式
-
-              owo.tool.each(owo.query('.tab-bar-item'), function(item) {
-                item.classList.remove('active');
-              });
-              target.classList.add('active');
-            }
-          }
+        "previou": function previou() {
+          this.data.swiper.swipePrev();
         },
-        "template": {
-          "cardSwiper2": {
-            "data": {
-              "swiper": null
-            },
-            "created": function created() {
-              this.data.swiper = new Swiper(this.$el.getElementsByClassName('swiper-container')[0], {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-                slidesPerColumn: 3
-              });
-            },
-            "previou": function previou() {
-              this.data.swiper.slidePrev();
-            },
-            "next": function next() {
-              this.data.swiper.slideNext();
-            }
-          }
+        "next": function next() {
+          this.data.swiper.swipeNext();
         }
       },
-      "six": {
-        "template": {
-          "rollNews": {
-            "created": function created() {
-              var speed = 60;
-              var demob = document.getElementById("demob");
-              var demo2b = document.getElementById("demo2b");
-              var demo1b = document.getElementById("demo1b");
-              demo2b.innerHTML = demo1b.innerHTML;
-
-              function Marquee() {
-                if (demo2b.offsetTop - demob.scrollTop <= 0) {
-                  demob.scrollTop = 0;
-                } else {
-                  demob.scrollTop++;
-                }
-              }
-
-              var MyMar = setInterval(Marquee, speed);
-
-              demob.onmouseover = function() {
-                clearInterval(MyMar);
-              };
-
-              demob.onmouseout = function() {
-                MyMar = setInterval(Marquee, speed);
-              };
-            }
-          }
-        }
-      },
-      "seven": {
-        "template": {
-          "cardSwiper3": {
-            "data": {
-              "swiper": null
-            },
-            "created": function created() {
-              var _this4 = this;
-
-              // 轮播图展示区域swiper
-              setTimeout(function() {
-                _this4.data.swiper = new Swiper(_this4.$el.getElementsByClassName('swiper-container')[0], {
-                  slidesPerView: 3,
-                  slidesPerGroup: 3,
-                  slidesPerColumn: 3,
-                  pagination: {
-                    el: _this4.$el.getElementsByClassName('swiper-pagination')[0],
-                    clickable: true,
-                    renderBullet: function renderBullet(index, className) {
-                      return '<span class="' + className + '">' + (index + 1) + '</span>';
-                    }
-                  }
-                });
-              }, 0);
-            },
-            "previou": function previou() {
-              this.data.swiper.slidePrev();
-            },
-            "next": function next() {
-              this.data.swiper.slideNext();
-            }
-          }
-        }
-      },
-      "eight": {
+      "newsList": {
         "created": function created() {
-          // 为页面中的li添加点击事件
-          var calendarList = owo.query('.people-box ul li');
-
-          function clearLiActive() {
-            for (var key in calendarList) {
-              if (calendarList.hasOwnProperty(key)) {
-                var element = calendarList[key];
-                element.classList.remove('active');
+          owo.tool.touch({
+            el: this.$el,
+            end: function end(e) {
+              if (e.swipe[1] < -100) {
+                owo.go('seven', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400');
               }
             }
-          } // 点击地区li事件
-
-
-          function activeLi(target) {
-            // 清除所有li的活跃样式
-            clearLiActive();
-            target.classList.add('active');
-            owo.query('.people-box h2')[0].innerHTML = target.getElementsByTagName('a')[0].innerHTML;
-
-            if (owo.query('.people-box .title-link a')[0]) {
-              owo.query('.people-box .title-link a')[0].href = target.getElementsByTagName('a')[0].href;
-            }
-
-            if (owo.query('.people-box .people-card-box')[0]) {
-              owo.query('.people-box .people-card-box')[0].innerHTML = target.getElementsByClassName('people-card-box-edit')[0].innerHTML;
-            }
-          }
-
-          for (var key in calendarList) {
-            if (calendarList.hasOwnProperty(key)) {
-              var element = calendarList[key];
-
-              element.onclick = function(e) {
-                activeLi(e.target);
-              };
-            }
-          } // 默认显示第一个
-
-
-          if (calendarList[0]) {
-            activeLi(calendarList[0]);
-          }
+          });
         }
       },
-      "leaving": {},
-      "menu": {
+      "newsList-1": {
         "created": function created() {
-          owo.tool.each(document.querySelectorAll('.menu li'), function(item) {
-            item.classList.remove('active');
+          owo.tool.touch({
+            el: this.$el,
+            end: function end(e) {
+              if (e.swipe[1] < -100) {
+                owo.go('seven', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400');
+              }
+            }
           });
-          var link = document.querySelectorAll('.menu .to-' + owo.activePage)[0];
-
-          if (link) {
-            link.classList.add('active');
-          }
-        },
-        "goPage": function goPage(name) {
-          owo.tool.each(document.querySelectorAll('.menu li'), function(item) {
-            item.classList.remove('active');
-          });
-          this.$target.classList.add('active');
-          owo.go(name, 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400');
         }
       }
-    };
-  </script>
-</body>
+    }
+  },
+  "three": {
+    "data": {
+      "showBox": "calendar",
+      "isShowMore": false
+    },
+    "created": function created() {
+      // 计算表格的样式
+      var ind = 0;
+      var list = owo.query('.body-bar li');
 
+      for (var key in list) {
+        if (list.hasOwnProperty(key)) {
+          var element = list[key];
+        }
+      } // 为页面中的li添加点击事件
+
+
+      var calendarList = owo.query('.calendar-box ul li');
+
+      function clearLiActive() {
+        for (var _key in calendarList) {
+          if (calendarList.hasOwnProperty(_key)) {
+            var _element = calendarList[_key];
+
+            _element.classList.remove('active');
+          }
+        }
+      } // 点击地区li事件
+
+
+      function activeLi(target) {
+        // 清除所有li的活跃样式
+        clearLiActive();
+        target.classList.add('active');
+        owo.query('.calendar-box h2')[0].innerHTML = target.getElementsByTagName('a')[0].innerHTML;
+
+        if (owo.query('.calendar-box .title-link a')[0]) {
+          owo.query('.calendar-box .title-link a')[0].href = target.getElementsByTagName('a')[0].href;
+          owo.query('.calendar-box .show-img')[0].src = target.getElementsByTagName('img')[0].src;
+        }
+      }
+
+      for (var _key2 in calendarList) {
+        if (calendarList.hasOwnProperty(_key2)) {
+          var _element2 = calendarList[_key2];
+
+          _element2.onclick = function (e) {
+            activeLi(e.target);
+          };
+        }
+      } // 默认显示第一个
+
+
+      activeLi(calendarList[0]);
+    },
+    "changeItem": function changeItem(name) {
+      owo.tool.change(this, 'showBox', name);
+      var switchList = owo.query('.switch-bar-item');
+
+      for (var key in switchList) {
+        if (switchList.hasOwnProperty(key)) {
+          var element = switchList[key];
+          element.classList.remove('active');
+        }
+      }
+
+      this.$target.classList.add('active');
+    },
+    "showMore": function showMore() {
+      console.log(owo.query('.table-box ul')[0]);
+      this.data.isShowMore = !this.data.isShowMore;
+
+      if (this.data.isShowMore) {
+        owo.query('.table-box ul')[0].style.height = 'auto';
+        this.$target.innerHTML = '隐藏更多▴';
+      } else {
+        owo.query('.table-box ul')[0].style.height = '300px';
+        this.$target.innerHTML = '显示全部▾';
+      }
+    }
+  },
+  "eight": {
+    "data": {
+      "showPhoneMenu": false
+    },
+    "created": function created() {
+      // 为页面中的li添加点击事件
+      var calendarList = owo.query('.people-box ul li');
+
+      function clearLiActive() {
+        for (var key in calendarList) {
+          if (calendarList.hasOwnProperty(key)) {
+            var element = calendarList[key];
+            element.classList.remove('active');
+          }
+        }
+      } // 点击地区li事件
+
+
+      function activeLi(target) {
+        // 清除所有li的活跃样式
+        clearLiActive();
+        target.classList.add('active');
+        owo.query('.people-box h2')[0].innerHTML = target.getElementsByTagName('a')[0].innerHTML;
+
+        if (owo.query('.people-box .title-link a')[0]) {
+          owo.query('.people-box .title-link a')[0].href = target.getElementsByTagName('a')[0].href;
+        }
+
+        if (owo.query('.people-box .people-card-box')[0]) {
+          owo.query('.people-box .people-card-box')[0].innerHTML = target.getElementsByClassName('people-card-box-edit')[0].innerHTML;
+        }
+      }
+
+      for (var key in calendarList) {
+        if (calendarList.hasOwnProperty(key)) {
+          var element = calendarList[key];
+
+          element.onclick = function (e) {
+            activeLi(e.target);
+          };
+        }
+      } // 默认显示第一个
+
+
+      if (calendarList[0]) {
+        activeLi(calendarList[0]);
+      }
+    },
+    "showMenu": function showMenu() {
+      this.data.showPhoneMenu = !this.data.showPhoneMenu;
+
+      if (this.data.showPhoneMenu) {
+        owo.query('.people-box ul')[0].style.display = 'block';
+      } else {
+        owo.query('.people-box ul')[0].style.display = 'none';
+      }
+    }
+  },
+  "seven": {
+    "template": {
+      "cardSwiper3": {
+        "data": {
+          "swiper": null
+        },
+        "created": function created() {
+          var _this2 = this;
+
+          // 轮播图展示区域swiper
+          setTimeout(function () {
+            _this2.data.swiper = new Swiper(_this2.$el.getElementsByClassName('swiper-container')[0], {
+              slidesPerView: _owo.isMobi ? 2 : 3,
+              slidesPerGroup: _owo.isMobi ? 2 : 3,
+              slidesPerColumn: 3,
+              pagination: {
+                el: _this2.$el.getElementsByClassName('swiper-pagination')[0],
+                clickable: true,
+                renderBullet: function renderBullet(index, className) {
+                  return '<span class="' + className + '">' + (index + 1) + '</span>';
+                }
+              }
+            });
+          }, 0);
+        },
+        "previou": function previou() {
+          this.data.swiper.slidePrev();
+        },
+        "next": function next() {
+          this.data.swiper.slideNext();
+        }
+      }
+    }
+  },
+  "five": {
+    "created": function created() {
+      var _this3 = this;
+
+      setTimeout(function () {
+        if (owo.query('.tab-bar-item')[0]) {
+          _this3.changepage(owo.query('.tab-bar-item')[0]);
+        }
+      }, 0);
+    },
+    "changepage": function changepage(item) {
+      var target = item ? item : this.$target;
+      var swiperBox = target.getElementsByClassName('swiper-wrapper')[0];
+
+      if (swiperBox) {
+        var showSwiper = owo.query('.card-swiper-box-9 .swiper-wrapper')[0];
+
+        if (showSwiper) {
+          showSwiper.innerHTML = swiperBox.innerHTML;
+          owo.script.five.template.cardSwiper2.data.swiper.updateSlides(); // 给当前标签设置活跃样式
+
+          owo.tool.each(owo.query('.tab-bar-item'), function (item) {
+            item.classList.remove('active');
+          });
+          target.classList.add('active');
+        }
+      }
+    },
+    "template": {
+      "cardSwiper2": {
+        "data": {
+          "swiper": null
+        },
+        "created": function created() {
+          this.data.swiper = new Swiper(this.$el.getElementsByClassName('swiper-container')[0], {
+            slidesPerView: _owo.isMobi ? 1 : 3,
+            slidesPerGroup: _owo.isMobi ? 1 : 3,
+            slidesPerColumn: _owo.isMobi ? 1 : 3
+          });
+        },
+        "previou": function previou() {
+          this.data.swiper.slidePrev();
+        },
+        "next": function next() {
+          this.data.swiper.slideNext();
+        }
+      }
+    }
+  },
+  "six": {
+    "template": {
+      "rollNews": {
+        "created": function created() {
+          var speed = 60;
+          var demob = document.getElementById("demob");
+          var demo2b = document.getElementById("demo2b");
+          var demo1b = document.getElementById("demo1b");
+          demo2b.innerHTML = demo1b.innerHTML;
+
+          function Marquee() {
+            if (demo2b.offsetTop - demob.scrollTop <= 0) {
+              demob.scrollTop = 0;
+            } else {
+              demob.scrollTop++;
+            }
+          }
+
+          var MyMar = setInterval(Marquee, speed);
+
+          demob.onmouseover = function () {
+            clearInterval(MyMar);
+          };
+
+          demob.onmouseout = function () {
+            MyMar = setInterval(Marquee, speed);
+          };
+        }
+      }
+    }
+  },
+  "four": {
+    "template": {
+      "cardSwiper": {
+        "data": {
+          "swiper": null
+        },
+        "created": function created() {
+          var _this4 = this;
+
+          // 轮播图展示区域swiper
+          setTimeout(function () {
+            _this4.data.swiper = new Swiper(_this4.$el.getElementsByClassName('swiper-container')[0], {
+              slidesPerView: _owo.isMobi ? 1 : 2,
+              slidesPerGroup: _owo.isMobi ? 1 : 2,
+              slidesPerColumn: _owo.isMobi ? 1 : 2,
+              on: {
+                slideChange: function slideChange() {
+                  _this4.$el.getElementsByClassName('index-box')[0].innerText = Math.ceil(_this4.data.swiper.activeIndex / 2) + 1 + "/" + Math.ceil(_this4.data.swiper.slides.length / 4);
+                }
+              }
+            }); // 生成页码
+
+            _this4.$el.getElementsByClassName('index-box')[0].innerText = Math.ceil(_this4.data.swiper.activeIndex / 2) + 1 + "/" + Math.ceil(_this4.data.swiper.slides.length / 4);
+          }, 0);
+        },
+        "previou": function previou() {
+          this.data.swiper.slidePrev();
+        },
+        "next": function next() {
+          this.data.swiper.slideNext();
+        }
+      }
+    }
+  },
+  "leaving": {},
+  "menu": {
+    "created": function created() {
+      owo.tool.each(document.querySelectorAll('.menu li'), function (item) {
+        item.classList.remove('active');
+      });
+      var link = document.querySelectorAll('.menu .to-' + owo.activePage)[0];
+
+      if (link) {
+        link.classList.add('active');
+      }
+    },
+    "goPage": function goPage(name) {
+      owo.tool.each(document.querySelectorAll('.menu li'), function (item) {
+        item.classList.remove('active');
+      });
+      this.$target.classList.add('active');
+      owo.go(name, 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400');
+    }
+  },
+  "phoneOne": {
+    "created": function created() {
+      owo.tool.animate('zoomIn', owo.query('.main-img')[0]);
+      owo.tool.animate('fadeInUp', owo.query('.build')[0]); // setTimeout(() => {
+      //   isrun = false
+      // }, 3000)
+      // setTimeout(() => {
+      //   if (owo.activePage == 'one') {
+      //     owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
+      //   }
+      // }, 5000)
+    }
+  }
+};</script>
+  </body>
 </html>

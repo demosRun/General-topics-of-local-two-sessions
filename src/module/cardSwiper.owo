@@ -6,7 +6,7 @@
         .swiper-slide-box
           img(src="{{item.src}}" width="525" height="395")
           .text {{item.text}}
-  .tool-bar
+  .tool-bar.no-phone
     img.forward(src="@|forward-2.png|" o-hover="grow" :tap="next")
     img.back(src="@|back-2.png|" o-hover="grow" :tap="previou")
   .index-box
@@ -37,9 +37,9 @@
       // 轮播图展示区域swiper
       setTimeout(() => {
         this.data.swiper = new Swiper(this.$el.getElementsByClassName('swiper-container')[0], {
-          slidesPerView: 2,
-          slidesPerGroup : 2,
-          slidesPerColumn: 2,
+          slidesPerView: _owo.isMobi ? 1 : 2,
+          slidesPerGroup : _owo.isMobi ? 1 : 2,
+          slidesPerColumn: _owo.isMobi ? 1 : 2,
           on: {
             slideChange: () => {
               this.$el.getElementsByClassName('index-box')[0].innerText = `${Math.ceil(this.data.swiper.activeIndex / 2) + 1}/${Math.ceil(this.data.swiper.slides.length / 4)}`

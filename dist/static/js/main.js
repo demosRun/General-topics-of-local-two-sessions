@@ -3,7 +3,26 @@ document.body.addEventListener('touchmove', function (e) {
   e.preventDefault() // 阻止默认的处理方式(阻止下拉滑动的效果)
 }, {passive: false})
 
-var isrun = false
+var scale = document.documentElement.clientWidth / document.documentElement.clientHeight
+if ((scale) < 1) {
+  document.body.classList.add('phone')
+  setTimeout(() => {
+    owo.query = function (str) {
+      return document.querySelectorAll('.owo ' + str)
+    }
+    var owoDom = document.querySelectorAll('.owo[template]')
+    for (var ind = 0; ind < owoDom.length; ind++) {
+      var plugEL = owoDom[ind]
+      var plugName = plugEL.getAttribute('template')
+      // console.log(owo.script[plugName])
+      _owo.handlePage(owo.script[plugName], plugEL)
+      _owo.handleEvent(plugEL, owo.script[plugName])
+    }
+    document.getElementsByClassName('table-box')[0].style.display = 'block'
+  }, 100)
+} else {
+  document.body.classList.add('pc')
+}
 
 // windowAddMouseWheel();
 // function windowAddMouseWheel() {

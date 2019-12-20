@@ -1,8 +1,8 @@
 <template lang="pug">
 .five
   .box
-    img.page-logo(src="@|page-logo.png|")
-    plug(_name="cardSwiper2" _src="./src/module/cardSwiper2.owo")
+    img.page-logo.no-phone(src="@|page-logo.png|")
+    img.mini-title.no-pc(src="@|title-4.png|")
     .tab-bar.clear
       .tab-bar-item.active(:tap="changepage")
         .text 第一页
@@ -26,6 +26,7 @@
         .text 第五页
       .tab-bar-item(:tap="changepage")
         .text 第六页
+    plug(_name="cardSwiper2" _src="./src/module/cardSwiper2.owo")
 </template>
 
 <script>

@@ -2,7 +2,7 @@
 .card-swiper-box-9
   .swiper-container.clear
     .swiper-wrapper
-  .tool-bar
+  .tool-bar.no-phone
     img.back(src="@|back-2.png|" o-hover="grow" :tap="previou")
     img.forward(src="@|forward-2.png|" o-hover="grow" :tap="next")
   
@@ -15,9 +15,9 @@
     },
     created: function () {
       this.data.swiper = new Swiper(this.$el.getElementsByClassName('swiper-container')[0], {
-        slidesPerView: 3,
-        slidesPerGroup : 3,
-        slidesPerColumn: 3
+        slidesPerView: _owo.isMobi ? 1 : 3,
+        slidesPerGroup : _owo.isMobi ? 1 : 3,
+        slidesPerColumn: _owo.isMobi ? 1 : 3
       })
     },
     previou: function () {

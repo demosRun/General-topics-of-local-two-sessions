@@ -1,4 +1,4 @@
-// Thu Dec 19 2019 16:40:35 GMT+0800 (GMT+08:00)
+// Fri Dec 20 2019 17:36:57 GMT+0800 (GMT+08:00)
 var owo = {tool: {},state: {},};
 /* 方法合集 */
 var _owo = {}
@@ -84,7 +84,7 @@ _owo.bindEvent = function (eventName, eventFor, tempDom, moudleScript) {
 /* owo事件处理 */
 // 参数1: 当前正在处理的dom节点
 // 参数2: 当前正在处理的模块名称
-_owo.handleEvent = function (tempDom, templateName, moudleScript) {  
+_owo.handleEvent = function (tempDom, moudleScript) {  
   if (tempDom.attributes) {
     for (var ind = 0; ind < tempDom.attributes.length; ind++) {
       var attribute = tempDom.attributes[ind]
@@ -139,9 +139,9 @@ _owo.handleEvent = function (tempDom, templateName, moudleScript) {
       if (templateName) {
         // 如果即将遍历进入模块 设置即将进入的模块为当前模块
         // 获取模块的模块名
-        _owo.handleEvent(childrenDom, templateName, moudleScript.template[templateName])
+        _owo.handleEvent(childrenDom, moudleScript.template[templateName])
       } else {
-        _owo.handleEvent(childrenDom, templateName, moudleScript)
+        _owo.handleEvent(childrenDom, moudleScript)
       }
     }
   } else {
@@ -254,14 +254,14 @@ _owo.showPage = function() {
     entryDom.style.display = 'block'
     window.owo.activePage = page
     _owo.handlePage(owo.script[page], entryDom)
-    _owo.handleEvent(entryDom, null, owo.script[page])
+    _owo.handleEvent(entryDom, owo.script[page])
     // 处理插件
     var plugList = document.getElementsByClassName('owo-plug')
     for (var ind = 0; ind < plugList.length; ind++) {
       var plugEL = plugList[ind]
       var plugName = plugEL.getAttribute('template')
       _owo.handlePage(owo.script[plugName], plugEL)
-      _owo.handleEvent(plugEL, null, owo.script[plugName])
+      _owo.handleEvent(plugEL, owo.script[plugName])
     }
   } else {
     console.error('未设置程序入口!')
@@ -478,6 +478,23 @@ owo.tool.change = function (environment, key, value) {
 
 
 
+
+// 这是用于代码调试的自动刷新代码，他不应该出现在正式上线版本!
+if ("WebSocket" in window) {
+  // 打开一个 web socket
+  if (!window._owo.ws) window._owo.ws = new WebSocket("ws://" + window.location.host)
+  window._owo.ws.onmessage = function (evt) { 
+    if (evt.data == 'reload') {
+      location.reload()
+    }
+  }
+  window._owo.ws.onclose = function() { 
+    console.info('与服务器断开连接')
+  }
+} else {
+  console.error('浏览器不支持WebSocket')
+}
+
 // 切换页面动画
 function animation (oldDom, newDom, animationIn, animationOut, forward) {
   // 动画延迟
@@ -598,7 +615,7 @@ function switchPage (oldUrlParam, newUrlParam) {
   window.owo.activePage = newPage
   // 不可调换位置
   if (!window.owo.script[newPage]._isCreated) {
-    _owo.handleEvent(newDom, null, window.owo.script[newPage])
+    _owo.handleEvent(newDom, window.owo.script[newPage])
   }
   // 不可调换位置
   _owo.handlePage(window.owo.script[newPage], newDom)

@@ -247,7 +247,7 @@
               .time 2019
               .city 上海
               .name 政府工作报告
-  .swiper-pagination
+  .swiper-pagination.no-phone
 </template>
 
 <script>
@@ -259,8 +259,8 @@
       // 轮播图展示区域swiper
       setTimeout(() => {
         this.data.swiper = new Swiper(this.$el.getElementsByClassName('swiper-container')[0], {
-          slidesPerView: 3,
-          slidesPerGroup : 3,
+          slidesPerView: _owo.isMobi ? 2 : 3,
+          slidesPerGroup : _owo.isMobi ? 2 : 3,
           slidesPerColumn: 3,
           pagination: {
             el: this.$el.getElementsByClassName('swiper-pagination')[0],

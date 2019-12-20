@@ -1,7 +1,8 @@
 <template lang="pug">
 .six
   .box
-    img.page-logo(src="@|page-logo.png|")
+    img.page-logo.no-phone(src="@|page-logo.png|")
+    img.mini-title.no-pc(src="@|title-5.png|")
     .marking-box
       //- 二维码
       img.qr-image(src="@|qr.png|")

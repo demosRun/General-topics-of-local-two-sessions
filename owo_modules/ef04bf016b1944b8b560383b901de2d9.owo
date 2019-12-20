@@ -23,6 +23,7 @@
       ]
     },
     created: function () {
+      if (!owo.query('.swiper-1 .index')[0]) return
       const slideListLength = owo.query('.swiper-1 .swiper-wrapper .swiper-slide').length
       owo.query('.swiper-1 .index')[0].innerText = '1/' + slideListLength
       // 轮播图展示区域swiper

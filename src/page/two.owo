@@ -1,7 +1,7 @@
 <template lang="pug">
 .two
   .box
-    img(src="@|page-logo.png|")
+    img.no-phone(src="@|page-logo.png|")
     h1
       a(href="#") 内蒙古第二十届人民代表大会1月31日内蒙古第二十届人民代表大会日
     .content-box.clear

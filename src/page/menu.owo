@@ -1,5 +1,5 @@
 <template lang="pug">
-ul.menu
+ul.menu.no-phone
   li.to-one(:tap="goPage('one')") 封面
   li.to-two.active(:tap="goPage('two')") 两会要闻
   li.to-three(:tap="goPage('three')") 会期查询

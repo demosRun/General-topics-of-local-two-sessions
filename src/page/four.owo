@@ -1,7 +1,7 @@
 <template lang="pug">
 .four
   .box
-    img.page-logo(src="@|page-logo.png|")
+    img.page-logo.no-phone(src="@|page-logo.png|")
     plug(_name="cardSwiper" _src="./src/module/cardSwiper.owo")
 </template>
 
