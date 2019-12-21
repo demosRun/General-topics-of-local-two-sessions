@@ -2,6 +2,7 @@
 .four
   .box
     img.page-logo.no-phone(src="@|page-logo.png|")
+    img.mini-title.no-pc(src="@|title-5.png|")
     plug(_name="cardSwiper" _src="./src/module/cardSwiper.owo")
 </template>
 

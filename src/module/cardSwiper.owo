@@ -7,8 +7,8 @@
           img(src="{{item.src}}" width="525" height="395")
           .text {{item.text}}
   .tool-bar.no-phone
-    img.forward(src="@|forward-2.png|" o-hover="grow" :tap="next")
-    img.back(src="@|back-2.png|" o-hover="grow" :tap="previou")
+    img.forward(src="@|forward-2.png|" o-hover="grow" o-tap="next")
+    img.back(src="@|back-2.png|" o-hover="grow" o-tap="previou")
   .index-box
 </template>
 

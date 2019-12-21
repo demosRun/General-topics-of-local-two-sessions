@@ -1,5 +1,5 @@
 <template lang="pug">
-.one(:tap="owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')")
+.one(o-tap="owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')")
   //- plug(_name="floatCloud" _src="./src/module/floatCloud.owo")
   img.main-img(src="@|main.png|")
   img.build(src="@|build.png|")

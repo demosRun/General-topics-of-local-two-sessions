@@ -4,27 +4,27 @@
     img.page-logo.no-phone(src="@|page-logo.png|")
     img.mini-title.no-pc(src="@|title-4.png|")
     .tab-bar.clear
-      .tab-bar-item.active(:tap="changepage")
+      .tab-bar-item.active(o-tap="changepage")
         .text 第一页
         .swiper-wrapper
           .swiper-slide(:for="item in data._swiperBoxList" o-hover="grow")
             .swiper-slide-box
               img(src="{{item.src}}" width="525" height="395")
               .text {{item.text}}
-      .tab-bar-item(:tap="changepage")
+      .tab-bar-item(o-tap="changepage")
         .text 第二页
         .swiper-wrapper
           .swiper-slide(:for="item in data._swiperBoxList2" o-hover="grow")
             .swiper-slide-box
               img(src="{{item.src}}" width="525" height="395")
               .text {{item.text}}
-      .tab-bar-item(:tap="changepage")
+      .tab-bar-item(o-tap="changepage")
         .text 第三页
-      .tab-bar-item(:tap="changepage")
+      .tab-bar-item(o-tap="changepage")
         .text 第四页
-      .tab-bar-item(:tap="changepage")
+      .tab-bar-item(o-tap="changepage")
         .text 第五页
-      .tab-bar-item(:tap="changepage")
+      .tab-bar-item(o-tap="changepage")
         .text 第六页
     plug(_name="cardSwiper2" _src="./src/module/cardSwiper2.owo")
 </template>

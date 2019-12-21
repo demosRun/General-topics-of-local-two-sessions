@@ -7,7 +7,7 @@
       h2 内蒙古
       img.no-pc.icon-dizhi(src="@|dizhi-icon.png|")
       //- 手机上的切换按钮
-      .qiehuan-menu.no-pc(:tap="showMenu")
+      .qiehuan-menu.no-pc(o-tap="showMenu")
         img.icon-qiehuan(src="@|icon-menu.png|")
         span 切换城市
       .title-link

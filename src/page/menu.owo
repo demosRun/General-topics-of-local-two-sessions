@@ -1,13 +1,13 @@
 <template lang="pug">
 ul.menu.no-phone
-  li.to-one(:tap="goPage('one')") 封面
-  li.to-two.active(:tap="goPage('two')") 两会要闻
-  li.to-three(:tap="goPage('three')") 会期查询
-  li.to-eight(:tap="goPage('eight')") 领导人资料
-  li.to-seven(:tap="goPage('seven')") 政府工作报告
-  li.to-five(:tap="goPage('five')") 两会访谈
-  li.to-six(:tap="goPage('six')") 交卷时刻
-  li.to-four(:tap="goPage('four')") 高清组图
+  li.to-one(o-tap="goPage('one')") 封面
+  li.to-two.active(o-tap="goPage('two')") 两会要闻
+  li.to-three(o-tap="goPage('three')") 会期查询
+  li.to-eight(o-tap="goPage('eight')") 领导人资料
+  li.to-seven(o-tap="goPage('seven')") 政府工作报告
+  li.to-five(o-tap="goPage('five')") 两会访谈
+  li.to-six(o-tap="goPage('six')") 交卷时刻
+  li.to-four(o-tap="goPage('four')") 高清组图
 </template>
 
 

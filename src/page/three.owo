@@ -5,8 +5,8 @@
     img.mini-title.no-pc(src="@|title-1.png|")
     //- 顶部切换按钮
     .switch-bar.no-phone.clear
-      .switch-bar-item.fl.active(:tap="changeItem('calendar')") 日历形式
-      .switch-bar-item.fl(:tap="changeItem('table')") 表格形式
+      .switch-bar-item.fl.active(o-tap="changeItem('calendar')") 日历形式
+      .switch-bar-item.fl(o-tap="changeItem('table')") 表格形式
     .table-box(o-show="this.data.showBox === 'table'")
       .title-bar.clear
         .left.clear
@@ -22,7 +22,7 @@
           .name 北京
           .time-1 01.10～02.10
           .time-2 01.10～02.10
-      .no-pc.show-more(:tap="showMore()") 显示全部▾
+      .no-pc.show-more(o-tap="showMore()") 显示全部▾
     .calendar-box.no-phone(o-show="this.data.showBox === 'calendar'")
       h2 内蒙古
       .title-link

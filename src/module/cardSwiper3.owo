@@ -261,7 +261,7 @@
         this.data.swiper = new Swiper(this.$el.getElementsByClassName('swiper-container')[0], {
           slidesPerView: _owo.isMobi ? 2 : 3,
           slidesPerGroup : _owo.isMobi ? 2 : 3,
-          slidesPerColumn: 3,
+          slidesPerColumn: _owo.isMobi ? 4 : 3,
           pagination: {
             el: this.$el.getElementsByClassName('swiper-pagination')[0],
             clickable: true,
