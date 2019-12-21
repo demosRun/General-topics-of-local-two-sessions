@@ -17,6 +17,7 @@ html {
   background-size: cover;
 }
 body {
+  opacity: 0;
   background-size: auto 100%;
   background-position: center;
   background-image: url("../resource/bg.jpg");
@@ -90,7 +91,7 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 }
 
 .phone {
-  overflow: scroll;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   background-image: none;
@@ -107,14 +108,21 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
   display: none;
 }
 
-.phone .one {
-  background-size: 100% 100%;
-  background-image: url('../resource/phone-bg.jpg');
-}
-
 .phone .owo {
   height: auto;
 }
+
+.phone .one {
+  background-size: 100% 100%;
+  z-index: 999;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  transition: top 0.8s;
+  background-image: url('../resource/phone-bg.jpg');
+}
+
+
 
 .phone .one .build {
   width: 100%;
@@ -185,7 +193,7 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 }
 
 .phone .news-list li {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .phone .three.owo, .phone .two.owo, .phone .four.owo, .phone .five.owo, .phone .eight.owo, .phone .seven.owo, .phone .six.owo {
@@ -222,6 +230,8 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
   height: auto;
   width: 92%;
   margin: 0 auto;
+  min-width: 4;
+  min-height: 50vw;
 }
 
 .phone .eight .people-card {
@@ -438,4 +448,47 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 
 .phone .four.owo {
   padding-bottom: 80px;
+}
+
+.slide-nav {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.phone-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  z-index: 99;
+}
+
+.phone-bottom-bar .fl {
+  width: 50%;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.phone-bottom-bar a {
+  display: block;
+}
+
+.phone-bottom-bar .left {
+  background-color: #da1330;
+}
+
+.phone-bottom-bar .right {
+  background-color: #0077ec;
+}
+
+.mini-text {
+  position: absolute;
+  top: 18%;
+  line-height: 14px;
+  font-size: 12px;
+  color: #666;
+  left: 1px;
 }

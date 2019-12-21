@@ -33,35 +33,37 @@
 <body>
   <!-- 页面区域 -->
   <!-- 页面[one]-->
-  <div class="one owo" o-tap="owo.go('two', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400')" template="one" style="display: none;">
+  <div class="one owo" o-tap="goTwo" template="one" style="display: none;">
     <img class="main-img" src="./static/resource/main.png">
     <img class="build" src="./static/resource/build.png">
     <img class="logo" src="./static/resource/logo.png">
     <img class="arrow" src="./static/resource/arrow.png">
   </div>
   <!-- 页面[two]-->
+  <img class="no-pc phone-main" src="./static/resource/phone-main.png">
+  <div class="slide-nav no-pc owo-plug" template="slideNav">
+    <div class="left-nav-bar" o-tap="scroll(-100)"><svg t="1576916031074" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6314">
+        <path d="M244.89375 548.680273c0.640625 0.647461 1.298828 1.260742 1.967773 1.862305 0.602539 0.664063 1.21582 1.322266 1.863281 1.962891l457.020898 457.027148c19.285156 19.287891 50.552539 19.285156 69.834766 0 19.285156-19.28418 19.285156-50.549609 0-69.836719L349.651172 513.763477l429.456445-429.457031c19.28418-19.288086 19.28418-50.552539 0-69.840625-19.288086-19.287109-50.552539-19.287109-69.837695 0L244.89375 478.844922C225.605664 498.127148 225.605664 529.393164 244.89375 548.680273L244.89375 548.680273z" p-id="6315" fill="#ffffff"></path>
+      </svg></div>
+    <ul>
+      <li class="to-one" o-tap="goClass('one')">封面</li>
+      <li class="to-two active" o-tap="goClass('two')">两会要闻</li>
+      <li class="to-three" o-tap="goClass('three')">会期查询</li>
+      <li class="to-eight" o-tap="goClass('eight')">领导人资料</li>
+      <li class="to-seven" o-tap="goClass('seven')">政府工作报告</li>
+      <li class="to-five" o-tap="goClass('five')">两会访谈</li>
+      <li class="to-six" o-tap="goClass('six')">交卷时刻</li>
+      <li class="to-four" o-tap="goClass('four')">高清组图</li>
+    </ul>
+    <div class="right-nav-bar" o-tap="scroll(100)"><svg t="1576916242137" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7830">
+        <path d="M804.288 520.288c1.119-14.86-3.681-30.045-15.009-41.627l-446.179-446.499c-21.028-20.961-55.078-20.961-76.291 0.033-21.065 20.999-20.921 55.265-0.11 76.258l411.912 411.875-411.946 411.731c-20.849 21.098-21.176 55.046-0.071 76.187 21.279 21.031 55.222 20.993 76.363-0.038l446.323-446.148c11.4-11.472 16.128-26.658 15.009-41.772v0 0 0zM804.288 520.288z" fill="#ffffff"></path>
+      </svg></div>
+  </div>
   <div class="two owo" template="two" style="display: none;">
     <div class="box">
       <img class="no-phone" src="./static/resource/page-logo.png">
-      <img class="no-pc phone-main" src="./static/resource/phone-main.png">
-      <div class="slide-nav no-pc" template="slideNav">
-        <div class="left-nav-bar" o-tap="scroll(-100)"><svg t="1576916031074" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6314">
-            <path d="M244.89375 548.680273c0.640625 0.647461 1.298828 1.260742 1.967773 1.862305 0.602539 0.664063 1.21582 1.322266 1.863281 1.962891l457.020898 457.027148c19.285156 19.287891 50.552539 19.285156 69.834766 0 19.285156-19.28418 19.285156-50.549609 0-69.836719L349.651172 513.763477l429.456445-429.457031c19.28418-19.288086 19.28418-50.552539 0-69.840625-19.288086-19.287109-50.552539-19.287109-69.837695 0L244.89375 478.844922C225.605664 498.127148 225.605664 529.393164 244.89375 548.680273L244.89375 548.680273z" p-id="6315" fill="#ffffff"></path>
-          </svg></div>
-        <ul>
-          <li class="to-one" o-tap="goClass('one')">封面</li>
-          <li class="to-two active" o-tap="goClass('two')">两会要闻</li>
-          <li class="to-three" o-tap="goClass('three')">会期查询</li>
-          <li class="to-eight" o-tap="goClass('eight')">领导人资料</li>
-          <li class="to-seven" o-tap="goClass('seven')">政府工作报告</li>
-          <li class="to-five" o-tap="goClass('five')">两会访谈</li>
-          <li class="to-six" o-tap="goClass('six')">交卷时刻</li>
-          <li class="to-four" o-tap="goClass('four')">高清组图</li>
-        </ul>
-        <div class="right-nav-bar" o-tap="scroll(100)"><svg t="1576916242137" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7830">
-            <path d="M804.288 520.288c1.119-14.86-3.681-30.045-15.009-41.627l-446.179-446.499c-21.028-20.961-55.078-20.961-76.291 0.033-21.065 20.999-20.921 55.265-0.11 76.258l411.912 411.875-411.946 411.731c-20.849 21.098-21.176 55.046-0.071 76.187 21.279 21.031 55.222 20.993 76.363-0.038l446.323-446.148c11.4-11.472 16.128-26.658 15.009-41.772v0 0 0zM804.288 520.288z" fill="#ffffff"></path>
-          </svg></div>
-      </div>
+      
+      
       <h1>
         <a href="#">内蒙古第二十届人民代表大会1月31日内蒙古第二十届人民代表大会日</a>
       </h1>
@@ -142,11 +144,14 @@
       </div>
     </div>
   </div>
+  
   <!-- 页面[three]-->
   <div class="three owo" template="three" style="display: none;">
     <div class="box">
       <img class="no-phone" src="./static/resource/page-logo.png">
       <img class="mini-title no-pc" src="./static/resource/title-1.png">
+      <!-- 只有手机才会显示的小字 -->
+      <div class="no-pc mini-text">点<br>击<br>城<br>市<br>，<br>查<br>看<br>各<br>省<br>分<br>专<br>题<br>。</div>
       <div class="switch-bar no-phone clear">
         <div class="switch-bar-item fl active" o-tap="changeItem('calendar')">日历形式</div>
         <div class="switch-bar-item fl" o-tap="changeItem('table')">表格形式</div>
@@ -154,12 +159,12 @@
       <div class="table-box" o-show="this.data.showBox === 'table'">
         <div class="title-bar clear">
           <div class="left clear">
-            <div class="title-bar-item" style="width:30%">省会</div>
+            <div class="title-bar-item" style="width:20%">省会</div>
             <div class="title-bar-item">人大会时间</div>
             <div class="title-bar-item">政协会时间</div>
           </div>
           <div class="right clear">
-            <div class="title-bar-item line" style="width:30%">省会</div>
+            <div class="title-bar-item line" style="width:20%">省会</div>
             <div class="title-bar-item">人大会时间</div>
             <div class="title-bar-item">政协会时间</div>
           </div>
@@ -474,7 +479,7 @@
           <img class="icon-qiehuan" src="./static/resource/icon-menu.png">
           <span>切换城市</span>
         </div>
-        <div class="title-link">
+        <div class="title-link no-phone">
           <a href="#">进入分专题 &gt;&gt;</a>
         </div>
         <div class="people-card-box clear">
@@ -1607,7 +1612,7 @@
   <div class="four owo" template="four" style="display: none;">
     <div class="box">
       <img class="page-logo no-phone" src="./static/resource/page-logo.png">
-      <img class="mini-title no-pc" src="./static/resource/title-5.png">
+      <img class="mini-title no-pc" src="./static/resource/title-6.png">
       <div class="card-swiper-box" template="cardSwiper">
         <div class="swiper-container clear">
           <div class="swiper-wrapper">
@@ -1728,6 +1733,15 @@
     <img class="arrow" src="./static/resource/arrow.png">
   </div>
 
+  <!-- 手机才有的底部导航栏 -->
+  <div class="no-pc phone-bottom-bar clear">
+    <div class="fl left">
+      <a href="#">各省份专题</a>
+    </div>
+    <div class="fl right">
+      <a href="#">我要留言</a>
+    </div>
+  </div>
 
   <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
   <script src="./static/js/swiper.4.5.0.min.js" type="text/javascript" charset="UTF-8"></script>
@@ -1747,18 +1761,21 @@
       "one": {
         "created": function created() {
           owo.tool.animate('zoomIn', owo.query('.main-img')[0]);
-          owo.tool.animate('fadeInUp', owo.query('.build')[0]); // setTimeout(() => {
-          //   isrun = false
-          // }, 3000)
-          // setTimeout(() => {
-          //   if (owo.activePage == 'one') {
-          //     owo.go('two', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')
-          //   }
-          // }, 5000)
+          owo.tool.animate('fadeInUp', owo.query('.build')[0]);
+        },
+        "goTwo": function () {
+          if (!_owo.isMobi) {
+            owo.go('two', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400')
+          } else {
+            document.getElementsByClassName('one owo')[0].style.top = '-100vh'
+            setTimeout(function () {
+              document.body.style.overflow = 'auto'
+            }, 0)
+          }
         }
       },
       "two": {
-        "created": function created() {
+        "show": function show() {
           owo.tool.each(document.querySelectorAll('.menu li'), function(item) {
             item.classList.remove('active');
           });
@@ -1769,37 +1786,6 @@
           }
         },
         "template": {
-          "slideNav": {
-            "goClass": function goClass(name) {
-              var dom = document.getElementsByClassName(name)[0];
-
-              if (dom) {
-                (function() {
-                  var offsetTop = dom.offsetTop;
-
-                  for (var index = 0; index < 20; index++) {
-                    setTimeout(function() {
-                      document.body.scrollTo(0, document.body.scrollTop + offsetTop / 20);
-                    }, index * 5);
-                  }
-                })();
-              }
-            },
-            "scroll": function scroll(number) {
-              var ul = this.$el.getElementsByTagName('ul')[0];
-
-              if (ul) {
-                for (var index = 0; index < 20; index++) {
-                  setTimeout(function() {
-                    ul.scrollTo(ul.scrollLeft + Number(number) / 20, 0);
-                  }, index * 5);
-                }
-              }
-            },
-            "prop": {
-              "class": "no-pc"
-            }
-          },
           "ProgressBarSwiper": {
             "data": {
               "swiper": null
@@ -1954,6 +1940,39 @@
             owo.query('.table-box ul')[0].style.height = '300px';
             this.$target.innerHTML = '显示全部▾';
           }
+        }
+      },
+      "slideNav": {
+        "goClass": function goClass(name) {
+          var dom = document.getElementsByClassName(name)[0];
+
+          if (dom) {
+            
+            (function() {
+              document.body.scrollTop = 0
+              var offsetTop = dom.offsetTop;
+
+              for (var index = 0; index < 20; index++) {
+                setTimeout(function() {
+                  document.body.scrollTo(0, document.body.scrollTop + (offsetTop - 30) / 20);
+                }, index * 5);
+              }
+            })();
+          }
+        },
+        "scroll": function scroll(number) {
+          var ul = this.$el.getElementsByTagName('ul')[0];
+
+          if (ul) {
+            for (var index = 0; index < 20; index++) {
+              setTimeout(function() {
+                ul.scrollTo(ul.scrollLeft + Number(number) / 20, 0);
+              }, index * 5);
+            }
+          }
+        },
+        "prop": {
+          "class": "no-pc"
         }
       },
       "eight": {

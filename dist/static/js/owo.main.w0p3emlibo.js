@@ -226,9 +226,10 @@ _owo.showPage = function() {
   owo.entry = document.querySelector('[template]').getAttribute('template')
   // 取出URL地址判断当前所在页面
   var pageArg = _owo.getarg(window.location.hash)
-  
-  
-
+  if (pageArg !== null) {
+    window.location.href = ''
+    return
+  }
   // 计算$dom
   for(var page in owo.script) {
     var idList = document.querySelectorAll('.owo[template="' + page + '"] [id]')
@@ -314,6 +315,7 @@ owo.go = function (pageName, inAnimation, outAnimation, backInAnimation, backOut
 
 // url发生改变事件
 _owo.hashchange = function (e) {
+  if (_owo.isMobi) return
   // 这样处理而不是直接用event中的URL，是因为需要兼容IE
   owo.state.oldUrlParam = owo.state.newUrlParam;
   owo.state.newUrlParam = _owo.getarg(document.URL); 

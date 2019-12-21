@@ -411,7 +411,7 @@ li {
 
 .three .title-bar-item {
   float: left;
-  width: 35%;
+  width: 40%;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -428,12 +428,12 @@ li {
 
 .three .body-bar li div {
   float: left;
-  width: 35%;
+  width: 40%;
   text-align: center;
 }
 
 .three .body-bar li .name {
-  width: 30%;
+  width: 20%;
 }
 
 .three .body-bar li:after {

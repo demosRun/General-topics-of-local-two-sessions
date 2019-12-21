@@ -23,6 +23,9 @@ if ((scale) < 1) {
 } else {
   document.body.classList.add('pc')
 }
+setTimeout(function () {
+  document.body.style.opacity = '1'
+}, 100)
 
 // windowAddMouseWheel();
 // function windowAddMouseWheel() {
