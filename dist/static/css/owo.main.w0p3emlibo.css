@@ -140,6 +140,80 @@ li {
     bottom: 5%;
   }
 }
+.slide-nav a,
+.slide-nav svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-nav {
+  position: relative;
+  background-color: #e0233b;
+  line-height: 40px;
+  height: 40px;
+}
+
+.slide-nav ul {
+  line-height: 40px;
+  height: 40px;
+  overflow: auto;
+  display: block;
+  margin: 0 20px;
+  white-space: nowrap;
+}
+
+.slide-nav li {
+  display: inline;
+  margin: 0 10px;
+  font-size: 16px;
+  color: white;
+  line-height: 40px;
+  height: 40px;
+}
+
+.slide-nav .left-nav-bar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 10px;
+  margin: auto;
+  opacity: 0.6;
+}
+
+.slide-nav .right-nav-bar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: 10px;
+  margin: auto;
+  opacity: 0.6;
+}
+
+.slide-nav .left-nav-bar:active,
+.slide-nav .right-nav-bar:active {
+  opacity: 1;
+}
+
+.slide-nav ::-webkit-scrollbar {
+  width: 0px;
+  height: 0;
+  background-color: transparent;
+}
+
+/* 滚动槽 */
+
+.slide-nav ::-webkit-scrollbar-track {
+  border-radius: 0px;
+}
+
+/* 滚动条滑块 */
+
+.slide-nav ::-webkit-scrollbar-thumb {
+  background: transparent;
+}
 .swiper-box {
   height: 395px;
   overflow: hidden;

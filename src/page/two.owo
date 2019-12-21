@@ -3,6 +3,8 @@
   .box
     img.no-phone(src="@|page-logo.png|")
     img.no-pc.phone-main(src="@|phone-main.png|")
+    //- 手机才会显示的顶部导航栏
+    plug.no-pc(_name="slideNav" _src="./src/module/slideNav.owo")
     h1
       a(href="#") 内蒙古第二十届人民代表大会1月31日内蒙古第二十届人民代表大会日
     .content-box.clear
