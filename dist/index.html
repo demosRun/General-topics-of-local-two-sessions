@@ -39,22 +39,24 @@
       <img class="build" src="./static/resource/build.png">
       <img class="logo" src="./static/resource/logo.png">
       <!-- <img class="arrow" src="./static/resource/arrow.png"> -->
-      <p class="text">点击进入页面</p>
+      <!-- <p class="text">点击进入页面</p> -->
     </div>
     <!-- 页面[two]-->
     <img class="no-pc phone-main" src="./static/resource/phone-main.png">
     <div class="slide-nav no-pc owo-plug" template="slideNav">
       <ul>
-        <li class="to-two active" o-tap="goClass('two')">两会要闻</li>
-        <li class="to-three" o-tap="goClass('three')">会期查询</li>
-        <li class="to-eight" o-tap="goClass('eight')">领导人资料</li>
-        <li class="to-seven" o-tap="goClass('seven')">政府工作报告</li>
-        <li class="to-five" o-tap="goClass('five')">两会访谈</li>
-        <li class="to-six" o-tap="goClass('six')">交卷时刻</li>
-        <li class="to-four" o-tap="goClass('four')">高清组图</li>
+        <li class="to-two active" o-tap="goClass('two')">要闻</li>
+        <li class="to-three" o-tap="goClass('three')">会期</li>
+        <li class="to-eight" o-tap="goClass('eight')">资料</li>
+        <li class="to-seven" o-tap="goClass('seven')">报告</li>
+        <li class="to-five" o-tap="goClass('five')">访谈</li>
+        <li class="to-six" o-tap="goClass('six')">交卷</li>
+        <li class="to-four" o-tap="goClass('four')">组图</li>
       </ul>
-      <div class="right-nav-bar" o-tap="scroll()">
-        <svg t="1577077714029" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2575" width="64" height="64"><path d="M821 563.2H566.2v254.9c0 28.1-22.8 51-51 51-28.1 0-51-22.8-51-51V563.2H209.4c-28.1 0-51-22.8-51-51 0-28.1 22.8-51 51-51h254.8V206.4c0-28.1 22.8-51 51-51s51 22.8 51 51v254.9H821c28.2 0 51 22.8 51 51 0 28.1-22.8 50.9-51 50.9z" p-id="2576" fill="#ffffff"></path></svg>
+      <div class="right-nav-bar" o-tap="scroll">
+        <!-- 加减符号图标 -->
+        <svg class="add" t="1577077714029" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2575" width="64" height="64"><path d="M821 563.2H566.2v254.9c0 28.1-22.8 51-51 51-28.1 0-51-22.8-51-51V563.2H209.4c-28.1 0-51-22.8-51-51 0-28.1 22.8-51 51-51h254.8V206.4c0-28.1 22.8-51 51-51s51 22.8 51 51v254.9H821c28.2 0 51 22.8 51 51 0 28.1-22.8 50.9-51 50.9z" p-id="2576" fill="#ffffff"></path></svg>
+        <svg class="reduce" t="1577081401107" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4076" width="64" height="64"><path d="M914.759505 556.7676 108.928387 556.7676c-24.714891 0-44.771693-20.056801-44.771693-44.76453 0-24.714891 20.056801-44.771693 44.771693-44.771693l805.831119 0c24.762987 0 44.771693 20.056801 44.771693 44.771693C959.531198 536.711821 939.522492 556.7676 914.759505 556.7676L914.759505 556.7676zM914.759505 556.7676" p-id="4077" fill="#ffffff"></path></svg>
       </div>
     </div>
     <div class="two owo" template="two" style="display: none;">
@@ -1774,11 +1776,42 @@
   </div>
   <!-- 手机才有的底部导航栏 -->
   <div class="no-pc phone-bottom-bar clear">
-    <div class="fl left">
-      <a href="#">各省份专题</a>
+    <div class="top">
+      <ul class="menu-list clear">
+        <li><a href="#">广东</a></li>
+        <li><a href="#">福建</a></li>
+        <li><a href="#">上海</a></li>
+        <li><a href="#">南京</a></li>
+        <li><a href="#">乌鲁木齐</a></li>
+        <li><a href="#">内蒙古</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份</a></li>
+        <li><a href="#">省份省份</a></li>
+        <li><a href="#">省份</a></li>
+      </ul>
+      <div class="close" onclick="document.querySelector('.phone-bottom-bar .top').style.display = 'none'">
+        <svg t="1577091103196" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2576" width="32" height="32"><path d="M512 0C229.272524 0 0 229.272524 0 512s229.272524 512 512 512 512-229.272524 512-512S794.727476 0 512 0z m241.359982 701.667784a36.571429 36.571429 0 1 1-51.71509 51.715091L512 563.715091 322.355108 753.359982a36.571429 36.571429 0 1 1-51.71509-51.71509L460.284909 512 270.640018 322.355108a36.571429 36.571429 0 0 1 51.71509-51.71509L512 460.284909l189.644892-189.644891a36.571429 36.571429 0 0 1 51.71509 51.71509L563.715091 512z" p-id="2577" fill="#009fe9"></path></svg>
+      </div>
     </div>
-    <div class="fl right">
-      <a href="#">我要留言</a>
+    
+    <div class="bottom">
+      <div class="fl left" onclick="document.querySelector('.phone-bottom-bar .top').style.display = 'block'">各省份专题</div>
+      <div class="fl right">
+        <a href="#">我要留言</a>
+      </div>
     </div>
   </div>
 
@@ -1803,6 +1836,10 @@
         "created": function created() {
           owo.tool.animate('zoomIn', owo.query('.main-img')[0]);
           owo.tool.animate('fadeInUp', owo.query('.build')[0]);
+          var _this = this
+          setTimeout(function () {
+            _this.goTwo()
+          }, 3000);
         },
         "goTwo": function () {
           if (!_owo.isMobi) {
@@ -1821,12 +1858,16 @@
           if (_owo.isMobi) {
             myScroll = new IScroll('body');
             myScroll.on('scrollEnd', function () {
+              document.getElementsByClassName('slide-nav no-pc')[0].style.display = 'block'
               if ((-myScroll.y / myScroll.wrapperWidth) > 0.74) {
                 document.getElementsByClassName('slide-nav no-pc')[0].style.top = -myScroll.y + 'px'
               } else {
                 document.getElementsByClassName('slide-nav no-pc')[0].style.top = ''
               }
             });
+            myScroll.on('scrollStart', function () {
+              document.getElementsByClassName('slide-nav no-pc')[0].style.display = 'none'
+            })
           }
         },
         "show": function show() {
@@ -2005,6 +2046,11 @@
           var dom = document.getElementsByClassName(name)[0];
           if (dom) {
             (function() {
+              // 自动收起列表
+              var ul = document.getElementsByClassName('slide-nav')[0];
+              ul.style.height = '40px'
+              ul.classList.remove('more')
+              // 调转到对应位置
               myScroll.scrollTo(0, -dom.offsetTop + 30, 800)
             })();
           }
@@ -2016,8 +2062,10 @@
           if (ul) {
             if (this.data.isOpen) {
               ul.style.height = 'auto'
+              ul.classList.add('more')
             } else {
               ul.style.height = '40px'
+              ul.classList.remove('more')
             }
           }
         },
@@ -2062,8 +2110,9 @@
             if (calendarList.hasOwnProperty(key)) {
               var element = calendarList[key];
 
-              element.onclick = function(e) {
+              element.onclick = (e) => {
                 activeLi(e.target);
+                if (this.data.showPhoneMenu) this.showMenu()
               };
             }
           } // 默认显示第一个

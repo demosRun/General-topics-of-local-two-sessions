@@ -346,7 +346,7 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
   top: 0;
   width: 100%;
   height: auto;
-  background-position-y: 13vw;
+  background-position-y: 12vw;
   background-image: url('../resource/bookshelf-phone.png');
 }
 
@@ -360,7 +360,7 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 }
 
 .phone .book-swiper-box-9 .book-box {
-  transform: scale(0.6);
+  transform: scale(0.5);
 }
 .phone .card-swiper-box-9 {
   width: 100%;
@@ -407,18 +407,18 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 
 .phone .six .marking-box {
   width: 92%;
-  margin: 0;
   background-size: 100% auto;
-  height: 117vw;
+  height: 59vw;
   background-image: url("../resource/marking-phone.png");
   margin: 0 auto;
   background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .phone .six .qr-image {
   width: 27vw;
-  top: 53%;
-  right: 12%;
+  top: 5%;
+  right: 11%;
 }
 
 .phone .six .rolling-news {
@@ -427,6 +427,7 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
   top: 5%;
   height: 47vw;
   font-size: 14px;
+  display: none;
 }
 
 .phone .card-swiper-box, .phone .card-swiper-box .swiper-container, .phone .card-swiper-box .swiper-slide {
@@ -591,4 +592,54 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 
 .phone .to-one {
   display: none;
+}
+
+.phone .right-nav-bar .reduce, .phone .more .right-nav-bar .add {
+  display: none;
+}
+
+.phone .more .right-nav-bar .reduce {
+  display: block;
+}
+
+
+.phone .menu-list {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  color: #333;
+  height: calc(100% - 50px);
+  overflow: auto;
+}
+
+.phone .menu-list li {
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 34px;
+}
+
+.phone .phone-bottom-bar .top {
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.93);
+}
+
+
+.phone .phone-bottom-bar .close {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+}
+
+.phone .phone-bottom-bar .close svg {
+  display: block;;
 }

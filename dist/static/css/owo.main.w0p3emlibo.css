@@ -159,7 +159,7 @@ li {
   overflow: auto;
   overflow-y: hidden;
   display: block;
-  margin: 0 20px;
+  margin-right: 20px;
   white-space: nowrap;
 }
 
@@ -739,15 +739,18 @@ li {
 }
 
 .book-swiper-box-9 .book-box .book {
-  width: 162px;
-  height: 170px;
+  width: 155px;
+  height: 155px;
   cursor: pointer;
-  background-image: url('../resource/book-bg.png');
+  background-repeat: no-repeat;
 }
 
 .book-swiper-box-9 .book-box .book-1 {
   position: absolute;
   left: -22px;
+  top: 6px;
+  background-position-x: 19px;
+  background-image: url('../resource/book-bg.png');
 }
 
 .book-swiper-box-9 .book-box .book-1 .time {
@@ -765,6 +768,7 @@ li {
 .book-swiper-box-9 .book-box .book-2 {
   position: absolute;
   left: 57px;
+  background-image: url('../resource/book-bg-2.png');
 }
 
 .book-swiper-box-9 .book-box .book-2 .time {
@@ -1184,7 +1188,7 @@ li {
           animation: fade 1000ms infinite;
 }
 
-.phone .one .text {
+.one .text {
   position: absolute;
   color: purple;
   bottom: 2%;
