@@ -38,14 +38,12 @@
       <img class="main-img" src="./static/resource/main.png">
       <img class="build" src="./static/resource/build.png">
       <img class="logo" src="./static/resource/logo.png">
-      <img class="arrow" src="./static/resource/arrow.png">
+      <!-- <img class="arrow" src="./static/resource/arrow.png"> -->
+      <p class="text">点击进入页面</p>
     </div>
     <!-- 页面[two]-->
     <img class="no-pc phone-main" src="./static/resource/phone-main.png">
     <div class="slide-nav no-pc owo-plug" template="slideNav">
-      <div class="left-nav-bar" o-tap="scroll(-100)"><svg t="1576916031074" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6314">
-          <path d="M244.89375 548.680273c0.640625 0.647461 1.298828 1.260742 1.967773 1.862305 0.602539 0.664063 1.21582 1.322266 1.863281 1.962891l457.020898 457.027148c19.285156 19.287891 50.552539 19.285156 69.834766 0 19.285156-19.28418 19.285156-50.549609 0-69.836719L349.651172 513.763477l429.456445-429.457031c19.28418-19.288086 19.28418-50.552539 0-69.840625-19.288086-19.287109-50.552539-19.287109-69.837695 0L244.89375 478.844922C225.605664 498.127148 225.605664 529.393164 244.89375 548.680273L244.89375 548.680273z" p-id="6315" fill="#ffffff"></path>
-        </svg></div>
       <ul>
         <li class="to-one" o-tap="goClass('one')">封面</li>
         <li class="to-two active" o-tap="goClass('two')">两会要闻</li>
@@ -56,9 +54,9 @@
         <li class="to-six" o-tap="goClass('six')">交卷时刻</li>
         <li class="to-four" o-tap="goClass('four')">高清组图</li>
       </ul>
-      <div class="right-nav-bar" o-tap="scroll(100)"><svg t="1576916242137" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7830">
-          <path d="M804.288 520.288c1.119-14.86-3.681-30.045-15.009-41.627l-446.179-446.499c-21.028-20.961-55.078-20.961-76.291 0.033-21.065 20.999-20.921 55.265-0.11 76.258l411.912 411.875-411.946 411.731c-20.849 21.098-21.176 55.046-0.071 76.187 21.279 21.031 55.222 20.993 76.363-0.038l446.323-446.148c11.4-11.472 16.128-26.658 15.009-41.772v0 0 0zM804.288 520.288z" fill="#ffffff"></path>
-        </svg></div>
+      <div class="right-nav-bar" o-tap="scroll()">
+        <svg t="1577077714029" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2575" width="64" height="64"><path d="M821 563.2H566.2v254.9c0 28.1-22.8 51-51 51-28.1 0-51-22.8-51-51V563.2H209.4c-28.1 0-51-22.8-51-51 0-28.1 22.8-51 51-51h254.8V206.4c0-28.1 22.8-51 51-51s51 22.8 51 51v254.9H821c28.2 0 51 22.8 51 51 0 28.1-22.8 50.9-51 50.9z" p-id="2576" fill="#ffffff"></path></svg>
+      </div>
     </div>
     <div class="two owo" template="two" style="display: none;">
       <div class="box">
@@ -1998,6 +1996,9 @@
         }
       },
       "slideNav": {
+        "data": {
+          isOpen: false
+        },
         "goClass": function goClass(name) {
           var dom = document.getElementsByClassName(name)[0];
           if (name == 'one') {
@@ -2012,13 +2013,14 @@
           }
         },
         "scroll": function scroll(number) {
-          var ul = this.$el.getElementsByTagName('ul')[0];
-
+          var ul = document.getElementsByClassName('slide-nav')[0];
+          // console.log(ul)
+          this.data.isOpen = !this.data.isOpen
           if (ul) {
-            for (var index = 0; index < 20; index++) {
-              setTimeout(function() {
-                ul.scrollTo(ul.scrollLeft + Number(number) / 20, 0);
-              }, index * 5);
+            if (this.data.isOpen) {
+              ul.style.height = 'auto'
+            } else {
+              ul.style.height = '40px'
             }
           }
         },

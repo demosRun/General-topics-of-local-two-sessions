@@ -389,11 +389,12 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 
 .phone .five .tab-bar .tab-bar-item {
   cursor: pointer;
-  width: calc(33% - 2px);
+  width: calc(28% - 2px);
   height: 30px;
   line-height: 30px;
   font-size: 14px;
   margin-bottom: -2px;
+  margin: 2% 2%;
 }
 
 .phone .card-swiper-box-9 .swiper-slide-box {
@@ -424,7 +425,7 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
   width: 94%;
   left: 3%;
   top: 5%;
-  height: 170px;
+  height: 47vw;
   font-size: 14px;
 }
 
@@ -538,9 +539,9 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 .people-list-box li {
   float: left;
   color: #333;
-  width: 25%;
+  width: 33%;
   text-align: center;
-  line-height: 24px;
+  line-height: 28px;
   font-size: 14px;
 }
 
@@ -582,4 +583,8 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 .phone .five .tab-bar .active {
   color: white;
   background-color: #bd2026;
+}
+
+.phone .slide-nav {
+  overflow: hidden;
 }

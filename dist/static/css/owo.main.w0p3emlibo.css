@@ -156,7 +156,6 @@ li {
 
 .slide-nav ul {
   line-height: 40px;
-  height: 40px;
   overflow: auto;
   overflow-y: hidden;
   display: block;
@@ -165,13 +164,12 @@ li {
 }
 
 .slide-nav li {
-  display: inline;
   margin: 0 10px;
   font-size: 16px;
   color: white;
   line-height: 40px;
   height: 40px;
-  padding: 12px 0;
+  float: left;
 }
 
 .slide-nav .left-nav-bar {
@@ -188,7 +186,7 @@ li {
   position: absolute;
   width: 20px;
   height: 20px;
-  right: 0;
+  right: 3px;
   top: 10px;
   margin: auto;
   opacity: 0.6;
@@ -1186,20 +1184,30 @@ li {
           animation: fade 1000ms infinite;
 }
 
+.phone .one .text {
+  position: absolute;
+  color: purple;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+  text-align: center;
+  -webkit-animation: fade 1000ms infinite;
+          animation: fade 1000ms infinite;
+}
+
 @keyframes fade {
   from {
     opacity: 1;
-    bottom: 3%;
   }
 
   50% {
     opacity: 0.4;
-    bottom: 4%;
   }
 
   to {
     opacity: 1;
-    bottom: 5%;
   }
 }
 /* 页面切换动画 */
