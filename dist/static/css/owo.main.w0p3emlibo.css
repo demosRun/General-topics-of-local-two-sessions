@@ -620,6 +620,8 @@ li {
 .eight .people-card a {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
 }
 
 .eight .people-card img {
