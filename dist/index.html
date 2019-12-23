@@ -45,7 +45,6 @@
     <img class="no-pc phone-main" src="./static/resource/phone-main.png">
     <div class="slide-nav no-pc owo-plug" template="slideNav">
       <ul>
-        <li class="to-one" o-tap="goClass('one')">封面</li>
         <li class="to-two active" o-tap="goClass('two')">两会要闻</li>
         <li class="to-three" o-tap="goClass('three')">会期查询</li>
         <li class="to-eight" o-tap="goClass('eight')">领导人资料</li>
@@ -1811,6 +1810,9 @@
           } else {
             document.getElementsByClassName('one owo')[0].style.top = '-100vh'
             document.getElementsByClassName('phone-bottom-bar')[0].style.display = 'block'
+            setTimeout(() => {
+              document.getElementsByClassName('one owo')[0].style.opacity = '0'
+            }, 1000);
           }
         }
       },
@@ -2001,15 +2003,10 @@
         },
         "goClass": function goClass(name) {
           var dom = document.getElementsByClassName(name)[0];
-          if (name == 'one') {
-            document.getElementsByClassName('phone-bottom-bar')[0].style.display = 'none'
-            document.getElementsByClassName('one owo')[0].style.top = '0'
-          } else {
-            if (dom) {
-              (function() {
-                myScroll.scrollTo(0, -dom.offsetTop + 30, 800)
-              })();
-            }
+          if (dom) {
+            (function() {
+              myScroll.scrollTo(0, -dom.offsetTop + 30, 800)
+            })();
           }
         },
         "scroll": function scroll(number) {
