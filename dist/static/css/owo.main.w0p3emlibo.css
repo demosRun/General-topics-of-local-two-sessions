@@ -77,7 +77,7 @@ li {
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .one .logo {
@@ -787,9 +787,9 @@ li {
 }
 
 .book-swiper-box-9 .book-box .name {
-  -webkit-writing-mode: tb;
-      -ms-writing-mode: tb;
-          writing-mode: tb;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
   position: absolute;
   color: #b92b34;
   font-size: 14px;
@@ -800,9 +800,9 @@ li {
 }
 
 .book-swiper-box-9 .book-box .city {
-  -webkit-writing-mode: tb;
-      -ms-writing-mode: tb;
-          writing-mode: tb;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
   position: absolute;
   color: #b92b34;
   font-size: 16px;
