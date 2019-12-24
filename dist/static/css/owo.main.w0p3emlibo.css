@@ -775,9 +775,9 @@ li {
 
 .book-swiper-box-9 .book-box .book-2 .time {
   color: #333333;
-  -webkit-writing-mode: vertical-rl;
+  -webkit-writing-mode: tb-rl;
       -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+          writing-mode: tb-rl;
   position: absolute;
   left: 100px;
   font-size: 18px;
@@ -787,6 +787,9 @@ li {
 }
 
 .book-swiper-box-9 .book-box .name {
+  -webkit-writing-mode: bt-rl;
+      -ms-writing-mode: bt-rl;
+          writing-mode: bt-rl;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: vertical-rl;
           writing-mode: vertical-rl;
@@ -800,6 +803,9 @@ li {
 }
 
 .book-swiper-box-9 .book-box .city {
+  -webkit-writing-mode: bt-rl;
+      -ms-writing-mode: bt-rl;
+          writing-mode: bt-rl;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: vertical-rl;
           writing-mode: vertical-rl;

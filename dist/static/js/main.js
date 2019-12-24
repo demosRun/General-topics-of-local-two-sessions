@@ -6,7 +6,7 @@ document.body.addEventListener('touchmove', function (e) {
 var scale = document.documentElement.clientWidth / document.documentElement.clientHeight
 if ((scale) < 1) {
   document.body.classList.add('phone')
-  setTimeout(() => {
+  setTimeout(function () {
     owo.query = function (str) {
       return document.querySelectorAll('.owo ' + str)
     }

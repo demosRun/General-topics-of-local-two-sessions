@@ -478,6 +478,15 @@ owo.tool.change = function (environment, key, value) {
 }
 
 
+String.prototype.startsWith = function(str) {
+  if (!str || str.length > this.length)
+      return false;
+  if (this.substr(0, str.length) == str)
+      return true;
+  else
+      return false;
+  return true;
+}
 
 // 切换页面动画
 function animation (oldDom, newDom, animationIn, animationOut, forward) {

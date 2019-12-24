@@ -1846,7 +1846,7 @@
           } else {
             document.getElementsByClassName('one owo')[0].style.top = '-100vh'
             document.getElementsByClassName('phone-bottom-bar')[0].style.display = 'block'
-            setTimeout(() => {
+            setTimeout(function () {
               document.getElementsByClassName('one owo')[0].style.opacity = '0'
             }, 1000);
           }
@@ -2108,10 +2108,10 @@
           for (var key in calendarList) {
             if (calendarList.hasOwnProperty(key)) {
               var element = calendarList[key];
-
-              element.onclick = (e) => {
+              var _this = this
+              element.onclick = function (e) {
                 activeLi(e.target);
-                if (this.data.showPhoneMenu) this.showMenu()
+                if (_this.data.showPhoneMenu) _this.showMenu()
               };
             }
           } // 默认显示第一个
