@@ -25,7 +25,7 @@ if ((scale) < 1) {
 }
 setTimeout(function () {
   document.body.style.opacity = '1'
-}, 100)
+}, 400)
 
 // windowAddMouseWheel();
 // function windowAddMouseWheel() {
